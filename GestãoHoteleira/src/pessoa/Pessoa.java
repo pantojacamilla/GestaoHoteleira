@@ -6,14 +6,13 @@ public class Pessoa {
   
     private String nome;
     private String data_nasc;
-    private int idade;
     private String sexo;
     private String rg;
     private String cpf;
     private String telefone;
     private String email;
     ArrayList<Papel> listaPapel;
-    
+
     public String getNome() {
         return nome;
     }
@@ -28,14 +27,6 @@ public class Pessoa {
 
     public void setData_nasc(String data_nasc) {
         this.data_nasc = data_nasc;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
     }
 
     public String getSexo() {
@@ -78,7 +69,13 @@ public class Pessoa {
         this.email = email;
     }
     
-        
+    public void setPapel(Papel papel){
+        listaPapel.add(papel);
+    }
+    
+    public ArrayList getPapeis(){
+        return listaPapel;
+    }
     
     
 }
