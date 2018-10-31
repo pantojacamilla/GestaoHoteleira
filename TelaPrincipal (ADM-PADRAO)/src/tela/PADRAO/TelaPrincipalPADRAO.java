@@ -7,8 +7,8 @@ package tela.PADRAO;
 
 import tela.ADM.*;
 import tela.*;
-import tela.TelaCadastroPessoa;
-import tela.TelaCadastroPessoa;
+import tela.TelaCadastroFuncionario;
+import tela.TelaCadastroFuncionario;
 import tela.TelaCadastroUsuario;
 import tela.TelaCadastroUsuario;
 
@@ -187,7 +187,7 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        TelaCadastroPessoa telaCadPessoa = new TelaCadastroPessoa();
+        TelaCadastroFuncionario telaCadPessoa = new TelaCadastroFuncionario();
         desktop1.add(telaCadPessoa);
         telaCadPessoa.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed

@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tela.ADM;
 
-import backup_telas.TelaCadastroHospede;
+
 import tela.*;
-import tela.TelaCadastroPessoa;
-import tela.TelaCadastroPessoa;
+import tela.TelaCadastroFuncionario;
+import tela.TelaCadastroFuncionario;
 import tela.TelaCadastroUsuario;
 import tela.TelaCadastroUsuario;
 
@@ -239,7 +234,10 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-
+        TelaCadastroFuncionario telaCadFuncionario = new TelaCadastroFuncionario();
+        desktop1.add(telaCadFuncionario);
+        telaCadFuncionario.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -253,7 +251,7 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        TelaCadastroPessoa telaCadPessoa = new TelaCadastroPessoa();
+        TelaCadastroFuncionario telaCadPessoa = new TelaCadastroFuncionario();
         desktop1.add(telaCadPessoa);
         telaCadPessoa.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
