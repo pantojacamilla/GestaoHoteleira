@@ -1,7 +1,5 @@
 package pessoa;
 
-import java.util.ArrayList;
-
 public class Pessoa {
   
     private String nome;
@@ -11,7 +9,6 @@ public class Pessoa {
     private String cpf;
     private String telefone;
     private String email;
-    ArrayList<Papel> listaPapel;
 
     public String getNome() {
         return nome;
@@ -69,13 +66,7 @@ public class Pessoa {
         this.email = email;
     }
     
-    public void setPapel(Papel P){
-        listaPapel.add(P);
-    }
-    
-    public ArrayList getPapeis(){
-        return listaPapel;
-    }
+        
     
     
 }
