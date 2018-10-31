@@ -1,3 +1,5 @@
 # GestaoHoteleira
 Trabalho da disciplina de POO I
-Davi
+Participantes:
+-Camilla
+-Davi
