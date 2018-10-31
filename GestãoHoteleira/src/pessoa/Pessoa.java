@@ -1,5 +1,7 @@
 package pessoa;
 
+import java.util.ArrayList;
+
 public class Pessoa {
   
     private String nome;
@@ -10,7 +12,8 @@ public class Pessoa {
     private String cpf;
     private String telefone;
     private String email;
-
+    ArrayList<Papel> listaPapel;
+    
     public String getNome() {
         return nome;
     }
