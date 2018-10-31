@@ -250,10 +250,7 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-        TelaCadastroFuncionario telaCadPessoa = new TelaCadastroFuncionario();
-        desktop1.add(telaCadPessoa);
-        telaCadPessoa.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
