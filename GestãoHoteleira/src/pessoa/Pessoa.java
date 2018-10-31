@@ -69,8 +69,8 @@ public class Pessoa {
         this.email = email;
     }
     
-    public void setPapel(Papel papel){
-        listaPapel.add(papel);
+    public void setPapel(Papel P){
+        listaPapel.add(P);
     }
     
     public ArrayList getPapeis(){
