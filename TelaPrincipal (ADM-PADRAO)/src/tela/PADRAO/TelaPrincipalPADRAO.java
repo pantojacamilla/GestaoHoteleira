@@ -178,18 +178,14 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-
-        TelaCadastroUsuario telaCadUser = new TelaCadastroUsuario();
-        desktop1.add(telaCadUser);
-        telaCadUser.setVisible(true);
+        TelaCadastroHospede telaCadHospede = new TelaCadastroHospede();
+        desktop1.add(telaCadHospede);
+        telaCadHospede.setVisible(true);
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-        TelaCadastroFuncionario telaCadPessoa = new TelaCadastroFuncionario();
-        desktop1.add(telaCadPessoa);
-        telaCadPessoa.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed

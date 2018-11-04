@@ -10,6 +10,7 @@ import tela.TelaCadastroUsuario;
 /*
  * @author Davi EDITADO PELA CAMILLA
  */
+
 public class TelaPrincipalADM extends javax.swing.JFrame {
 
     /**
@@ -254,7 +255,9 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
+        TelaEditaFuncionario telaEditFunc = new TelaEditaFuncionario();
+        desktop1.add(telaEditFunc);
+        telaEditFunc.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed

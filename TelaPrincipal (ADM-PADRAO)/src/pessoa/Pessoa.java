@@ -1,6 +1,8 @@
 package pessoa;
 
-public class Pessoa {
+import Endereco.Endereco;
+
+public class Pessoa extends Endereco{
   
     private String nome;
     private String data_nasc;
