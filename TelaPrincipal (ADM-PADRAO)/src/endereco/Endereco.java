@@ -10,7 +10,6 @@ public class Endereco {
     private String bairro;
     private String cep; 
     private String complemento;
-    private String numero;
      
 // GETTERS E SETTERS
 
@@ -61,15 +60,4 @@ public class Endereco {
     public void setLogradouro(String complemento) {
         this.complemento = complemento;
     }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    
-    
 }
