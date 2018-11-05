@@ -1,6 +1,8 @@
 package tela.ADM;
 
 
+import java.awt.Toolkit;
+import javax.swing.JFrame;
 import tela.*;
 import tela.TelaCadastroFuncionario;
 import tela.TelaCadastroUsuario;
@@ -16,6 +18,7 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
      */
     public TelaPrincipalADM() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
     }
 
     /**
@@ -61,11 +64,11 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
         desktop1.setLayout(desktop1Layout);
         desktop1Layout.setHorizontalGroup(
             desktop1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 709, Short.MAX_VALUE)
         );
         desktop1Layout.setVerticalGroup(
             desktop1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addGap(0, 495, Short.MAX_VALUE)
         );
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/page.png"))); // NOI18N
@@ -228,8 +231,7 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
             .addComponent(desktop1)
         );
 
-        pack();
-        setLocationRelativeTo(null);
+        setBounds(0, 0, 725, 554);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed

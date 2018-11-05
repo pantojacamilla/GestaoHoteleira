@@ -1,10 +1,19 @@
 package tela.ADM;
 
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+
+
+
 public class TelaEditarFuncionarioADM extends javax.swing.JInternalFrame {
-    
+    CenterColumns cellRenderer = new CenterColumns();
 
     public TelaEditarFuncionarioADM() {
+      
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -45,6 +54,19 @@ public class TelaEditarFuncionarioADM extends javax.swing.JInternalFrame {
                 return types [columnIndex];
             }
         });
+        //
+
+        //header center alignment
+        TableCellRenderer centerRendererHeader = jTable1.getTableHeader().getDefaultRenderer();
+        JLabel headerLabel = (JLabel) centerRendererHeader;
+        headerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
+        //Columns center alignment
+        DefaultTableCellRenderer centerRendererColumn = new DefaultTableCellRenderer();
+        centerRendererColumn.setHorizontalAlignment(SwingConstants.CENTER);
+        jTable1.setDefaultRenderer(String.class, centerRendererColumn);
+
+        //
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
