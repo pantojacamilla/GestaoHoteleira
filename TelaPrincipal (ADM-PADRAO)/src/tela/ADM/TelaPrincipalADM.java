@@ -3,8 +3,6 @@ package tela.ADM;
 
 import tela.*;
 import tela.TelaCadastroFuncionario;
-import tela.TelaCadastroFuncionario;
-import tela.TelaCadastroUsuario;
 import tela.TelaCadastroUsuario;
 
 /*
@@ -255,7 +253,7 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        EditFunci telaEditFunc = new EditFunci();
+        TelaEditarFuncionarioADM telaEditFunc = new TelaEditarFuncionarioADM();
         desktop1.add(telaEditFunc);
         telaEditFunc.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
