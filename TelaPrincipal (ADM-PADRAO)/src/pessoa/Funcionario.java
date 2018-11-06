@@ -3,8 +3,8 @@ package pessoa;
 abstract class Funcionario extends Papel {
     
     private String cargo;
-    private boolean estado;
-    private double sal;
+ //   private boolean estado; Para esse atributo teremos que fazer a lógica posteriormente pois estado não estava na tela
+//    private double sal; Para esse atributo teremos que fazer a lógica posteriormente pois salário não estava na tela
 
     public String getCargo() {
         return cargo;
@@ -14,7 +14,7 @@ abstract class Funcionario extends Papel {
         this.cargo = cargo;
     }
 
-    public boolean isEstado() {
+/*   public boolean isEstado() {
         return estado;
     }
 
@@ -29,8 +29,6 @@ abstract class Funcionario extends Papel {
     public void setSal(double sal) {
         this.sal = sal;
     }
-    
-    
-
-    
+ */  
+      
 }

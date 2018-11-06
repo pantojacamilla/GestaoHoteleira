@@ -53,11 +53,13 @@ public class Endereco {
         this.cep = cep;
     }
 
-    public String getLogradouro() {
+    public String getComplemento() {
         return complemento;
     }
 
-    public void setLogradouro(String complemento) {
+    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
+
+
 }

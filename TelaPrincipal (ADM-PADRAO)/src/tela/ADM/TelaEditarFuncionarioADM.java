@@ -1,5 +1,6 @@
 package tela.ADM;
 
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -8,14 +9,48 @@ import javax.swing.table.TableCellRenderer;
 
 
 public class TelaEditarFuncionarioADM extends javax.swing.JInternalFrame {
-    CenterColumns cellRenderer = new CenterColumns();
-
+  
     public TelaEditarFuncionarioADM() {
-      
         initComponents();
+    }
+    
+    
+/*   
+    String nome, data_nasc,  sexo,  rg, cpf,  telefone, email, cargo, pais,  uf,  cidade,  bairro, cep, complemento;
+    
+    public TelaEditarFuncionarioADM(String nome, String data_nasc, String sexo, String rg, String cpf, String telefone, 
+            String email, String cargo, String pais, String uf, String cidade, String bairro, String cep, String complemento){
+        initComponents();
+//DADOS PESSOAIS      
+        this.nome = nome;
+        this.data_nasc = data_nasc;
+        this.sexo = sexo;
+        this.rg = rg;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.email = email;
+        this.cargo = cargo;
+//DADOS ENDEREÇO         
+        this.pais = pais;
+        this.uf = uf;
+        this.cidade = cidade;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.cep = complemento;
+        
+        addDataToTelaEditarFuncionarioADM();
         
     }
-
+    
+    void addDataToTelaEditarFuncionarioADM(){
+        DefaultTableModel dtm = jTable1.getModel();
+        
+    
+    }
+    */ 
+    
+    
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -37,10 +72,7 @@ public class TelaEditarFuncionarioADM extends javax.swing.JInternalFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Camilla Lobato Pantoja", "11 /03/2000", "F", "7599512", "02282155289", "982319826", "pantojacamilla@gmail.com", "Brazil", "PA", "Belém", "Coqueiro", "67115000", "Cond. Park Itália N.178 Q.5 C.43"},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Nome", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
@@ -124,9 +156,9 @@ public class TelaEditarFuncionarioADM extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
+                .addGap(115, 115, 115)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -168,4 +200,6 @@ public class TelaEditarFuncionarioADM extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+
 }

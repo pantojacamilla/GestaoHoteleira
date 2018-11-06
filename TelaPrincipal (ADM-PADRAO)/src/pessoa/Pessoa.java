@@ -4,14 +4,15 @@ import Endereco.Endereco;
 
 public class Pessoa extends Endereco{
   
-    private String nome;
-    private String data_nasc;
-    private String sexo;
-    private String rg;
-    private String cpf;
-    private String telefone;
-    private String email;
-
+    String nome;
+    String data_nasc;
+    String sexo;
+    String rg;
+    String cpf;
+    String telefone;
+    String email;
+    
+    
     public String getNome() {
         return nome;
     }
@@ -67,8 +68,4 @@ public class Pessoa extends Endereco{
     public void setEmail(String email) {
         this.email = email;
     }
-    
-        
-    
-    
 }

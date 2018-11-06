@@ -1,10 +1,8 @@
 package tela.ADM;
 
 
-import java.awt.Toolkit;
 import javax.swing.JFrame;
 import tela.*;
-import tela.TelaCadastroFuncionario;
 import tela.TelaCadastroUsuario;
 
 /*

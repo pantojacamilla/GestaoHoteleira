@@ -7,8 +7,8 @@ package tela.PADRAO;
 
 import tela.ADM.*;
 import tela.*;
-import tela.TelaCadastroFuncionario;
-import tela.TelaCadastroFuncionario;
+import tela.ADM.TelaCadastroFuncionario;
+import tela.ADM.TelaCadastroFuncionario;
 import tela.TelaCadastroUsuario;
 import tela.TelaCadastroUsuario;
 

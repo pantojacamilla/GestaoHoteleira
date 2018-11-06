@@ -1,7 +1,7 @@
 package pessoa;
 
 public class Administrador extends Funcionario {
-    
+/*    
     private String cargo;
     private double sal;
 
@@ -24,5 +24,5 @@ public class Administrador extends Funcionario {
     public void setSal(double sal) {
         this.sal = sal;
     }
-    
+*/    
 }

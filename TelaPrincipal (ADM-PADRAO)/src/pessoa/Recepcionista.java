@@ -2,8 +2,8 @@ package pessoa;
 
 public class Recepcionista extends Funcionario {
     
-    private String cargo;
-    private double sal;
+/*    private String cargo;
+//    private double sal;
 
     @Override
     public String getCargo() {
@@ -24,8 +24,6 @@ public class Recepcionista extends Funcionario {
     public void setSal(double sal) {
         this.sal = sal;
     }
-    
-    
-    
+*/    
     
 }
