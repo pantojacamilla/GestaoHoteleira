@@ -1,6 +1,7 @@
 package pessoa;
 
-import Endereco.Endereco;
+import endereco.Endereco;
+import java.util.ArrayList;
 
 public class Pessoa extends Endereco{
   
@@ -11,7 +12,7 @@ public class Pessoa extends Endereco{
     String cpf;
     String telefone;
     String email;
-    
+  ArrayList<Papel>  listaPapel = new ArrayList<>();
     
     public String getNome() {
         return nome;
@@ -68,4 +69,17 @@ public class Pessoa extends Endereco{
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public ArrayList<Papel> getListaPapel() {
+        return listaPapel;
+    }
+
+    public void setListaPapeis(ArrayList<Papel> listaPapel) {
+        this.listaPapel = listaPapel;
+    }
+    
+   public void setListaPapel(Papel p){
+      this.listaPapel.add(p);
+   }
+
 }

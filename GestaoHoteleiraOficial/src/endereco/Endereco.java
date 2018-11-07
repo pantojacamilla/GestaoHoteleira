@@ -1,4 +1,4 @@
-package Endereco;
+package endereco;
 /*
   @author Camilla Lobato Pantoja
  */
