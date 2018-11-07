@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     
-    ArrayList<Funcionario> ArrayListFuncionario;
+   ArrayList<Funcionario> ArrayListFuncionario = new ArrayList<> ();
     
     
     public TelaCadastroFuncionarioAdm( ArrayList<Funcionario> ArrayListFuncionario) {
@@ -331,7 +331,7 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
 
         this.ArrayListFuncionario.add(F);
         
-//       mostrar();
+
     }//GEN-LAST:event_btnSaveFuncActionPerformed
 /*    public void mostrar(){
         String matriz[][] = new String[ArrayListFuncionario.size()][14];

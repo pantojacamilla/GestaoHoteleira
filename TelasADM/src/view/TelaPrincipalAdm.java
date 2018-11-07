@@ -88,7 +88,7 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-         TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm();
+         TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm(this.ArrayListFuncionario);
          jDesktopPane1.add(TelaEditFunc);
          TelaEditFunc.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed

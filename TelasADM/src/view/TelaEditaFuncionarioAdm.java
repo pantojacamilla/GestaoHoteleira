@@ -11,12 +11,12 @@ import javax.swing.table.TableCellRenderer;
 
 
     public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
-  
-    ArrayList<Funcionario> ArrayListFuncionario = new ArrayList<>();
+        
+    ArrayList<Funcionario> ArrayListFuncionario  = new ArrayList<>();
+ 
     
-
-
-    public TelaEditaFuncionarioAdm() {
+    public TelaEditaFuncionarioAdm(ArrayList<Funcionario> funcionarios) {
+        this.ArrayListFuncionario  = funcionarios;
         initComponents();
     }
     
@@ -177,9 +177,35 @@ import javax.swing.table.TableCellRenderer;
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
-       
+        mostrar();
     }//GEN-LAST:event_btnRefreshActionPerformed
-
+         public void mostrar(){
+        String matriz[][] = new String[ArrayListFuncionario.size()][14];
+        
+        for(int i=0;i<ArrayListFuncionario.size();i++){
+              matriz[i][0]= ArrayListFuncionario.get(i).getCargo();
+              matriz[i][1]= ArrayListFuncionario.get(i).getNome();
+              matriz[i][2]= ArrayListFuncionario.get(i).getData_nasc();
+              matriz[i][3]= ArrayListFuncionario.get(i).getSexo();
+              matriz[i][5]= ArrayListFuncionario.get(i).getCpf();
+              matriz[i][4]= ArrayListFuncionario.get(i).getRg();
+              matriz[i][6]= ArrayListFuncionario.get(i).getTelefone();
+              matriz[i][7]= ArrayListFuncionario.get(i).getEmail();
+              matriz[i][8]= ArrayListFuncionario.get(i).getPais();
+              matriz[i][9]= ArrayListFuncionario.get(i).getUf();
+              matriz[i][10]= ArrayListFuncionario.get(i).getCidade();
+              matriz[i][11]= ArrayListFuncionario.get(i).getBairro();
+              matriz[i][12]= ArrayListFuncionario.get(i).getCep();
+              matriz[i][13]= ArrayListFuncionario.get(i).getComplemento();
+        }
+            jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            matriz,
+            new String [] {
+                "Nome", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
+                "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
+            }
+        ));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRefresh;
