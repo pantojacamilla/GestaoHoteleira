@@ -78,6 +78,11 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         jLabel8.setText("E-mail");
 
         nomeF.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        nomeF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeFActionPerformed(evt);
+            }
+        });
 
         try {
             nascF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -223,6 +228,11 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         jLabel13.setText("Complemento");
 
         ufF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RN", "RS", "RJ", "RO", "RR", "SC", "SP", "SE", "TO" }));
+        ufF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ufFActionPerformed(evt);
+            }
+        });
 
         try {
             cepF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
@@ -310,7 +320,7 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSaveFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -330,6 +340,25 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
                                         compleF.getText()); 
 
         this.ArrayListFuncionario.add(F);
+        
+        /*teste
+        
+        Pessoa pessoa = new Pessoa();
+        pessoa.setDados();
+        
+        Papel papel;
+        if(campo.getText.equals("Administrador")){
+            papel = new Administrador();
+            papel.setTipo("Administrador");
+            
+        }else if(campo.getText.equals("Recepicionista")){
+            
+        }
+        
+        pessoa.setListaPapel(papel);
+        
+        papel.setPessoa(pessoa);*/
+        
         
 
     }//GEN-LAST:event_btnSaveFuncActionPerformed
@@ -363,6 +392,14 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     private void sexoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoFActionPerformed
         // TODO add your handling codep here:
     }//GEN-LAST:event_sexoFActionPerformed
+
+    private void ufFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ufFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ufFActionPerformed
+
+    private void nomeFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeFActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
