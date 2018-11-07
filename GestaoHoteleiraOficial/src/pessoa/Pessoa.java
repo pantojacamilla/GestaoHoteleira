@@ -5,13 +5,13 @@ import java.util.ArrayList;
 
 public class Pessoa extends Endereco{
   
-    String nome;
-    String data_nasc;
-    String sexo;
-    String rg;
-    String cpf;
-    String telefone;
-    String email;
+   private String nome;
+   private String data_nasc;
+   private String sexo;
+   private String rg;
+   private String cpf;
+   private String telefone;
+   private String email;
     ArrayList<Papel>  listaPapel = new ArrayList<>();
     
     public String getNome() {
