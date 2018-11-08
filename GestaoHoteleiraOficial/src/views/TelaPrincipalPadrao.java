@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tela.PADRAO;
+package views;
 
-import tela.ADM.*;
-import tela.*;
-import tela.ADM.TelaCadastroFuncionario;
-import tela.ADM.TelaCadastroFuncionario;
-import tela.TelaCadastroUsuario;
-import tela.TelaCadastroUsuario;
+//import tela.ADM.*;
+//import tela.*;
+//import tela.ADM.TelaCadastroFuncionario;
+//import tela.ADM.TelaCadastroFuncionario;
+//import tela.TelaCadastroUsuario;
+//import tela.TelaCadastroUsuario;
 
 /**
  *
  * @author Davi
  */
-public class TelaPrincipalPADRAO extends javax.swing.JFrame {
+public class TelaPrincipalPadrao extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaPrincipal
      */
-    public TelaPrincipalPADRAO() {
+    public TelaPrincipalPadrao() {
         initComponents();
     }
 
@@ -68,10 +68,8 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
             .addGap(0, 579, Short.MAX_VALUE)
         );
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/group.png"))); // NOI18N
         jMenu3.setText("Dependências");
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/group_add.png"))); // NOI18N
         jMenuItem6.setText("Visualizar Info Hotel");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +78,6 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem6);
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/group_edit.png"))); // NOI18N
         jMenuItem8.setText("Visualizar Quartos");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,10 +88,8 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_suit.png"))); // NOI18N
         jMenu2.setText("Hóspedes");
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItem2.setText("Cadastrar Hóspede");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +98,6 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_edit.png"))); // NOI18N
         jMenuItem3.setText("Editar Hóspede");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,10 +108,8 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/help.png"))); // NOI18N
         jMenu4.setText("Reservas");
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItem9.setText("Cadastrar Reserva");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +118,6 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem9);
 
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItem12.setText("Editar Reserva");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,10 +128,8 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/help.png"))); // NOI18N
         jMenu6.setText("Hospedagem");
 
-        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItem13.setText("Check in");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,7 +138,6 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem13);
 
-        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItem14.setText("Check out");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,9 +166,9 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        TelaCadastroHospede telaCadHospede = new TelaCadastroHospede();
-        desktop1.add(telaCadHospede);
-        telaCadHospede.setVisible(true);
+//        TelaCadastroHospede telaCadHospede = new TelaCadastroHospede();
+//        desktop1.add(telaCadHospede);
+ //       telaCadHospede.setVisible(true);
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -229,14 +217,38 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -249,7 +261,7 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPrincipalPADRAO().setVisible(true);
+                new TelaPrincipalPadrao().setVisible(true);
             }
         });
     }
