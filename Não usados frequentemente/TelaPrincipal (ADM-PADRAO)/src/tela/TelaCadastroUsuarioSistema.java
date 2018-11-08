@@ -9,12 +9,12 @@ package tela;
  *
  * @author Davi
  */
-public class TelaCadastroUsuario extends javax.swing.JInternalFrame {
+public class TelaCadastroUsuarioSistema extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaCadastroUsuario
      */
-    public TelaCadastroUsuario() {
+    public TelaCadastroUsuarioSistema() {
         initComponents();
     }
 

@@ -9,8 +9,8 @@ import tela.ADM.*;
 import tela.*;
 import tela.ADM.TelaCadastroFuncionario;
 import tela.ADM.TelaCadastroFuncionario;
-import tela.TelaCadastroUsuario;
-import tela.TelaCadastroUsuario;
+import tela.TelaCadastroUsuarioSistema;
+import tela.TelaCadastroUsuarioSistema;
 
 /**
  *
