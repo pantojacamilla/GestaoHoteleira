@@ -4,7 +4,7 @@ public abstract class Funcionario extends Papel{
     
     private String cargo;
     private double salario;
-    private boolean atividade = false;
+    private boolean atividade = false; //Referente a situação atual do funcionario
 
     public String getCargo() {
         return cargo;

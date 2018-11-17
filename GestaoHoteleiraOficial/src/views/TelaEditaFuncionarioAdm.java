@@ -20,9 +20,7 @@ import javax.swing.table.TableCellRenderer;
         initComponents();
     }
     
-     
-     
- 
+   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -48,7 +46,7 @@ import javax.swing.table.TableCellRenderer;
 
             },
             new String [] {
-                "Cargo", "Nome", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
+                "Nome", "Cargo", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
             }
         ) {
             Class[] types = new Class [] {
@@ -76,8 +74,8 @@ import javax.swing.table.TableCellRenderer;
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(150);
             jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(150);
             jTable1.getColumnModel().getColumn(2).setResizable(false);
             jTable1.getColumnModel().getColumn(2).setPreferredWidth(150);
             jTable1.getColumnModel().getColumn(3).setResizable(false);
@@ -101,12 +99,16 @@ import javax.swing.table.TableCellRenderer;
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 60, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jScrollPane3.setViewportView(jPanel1);
@@ -143,32 +145,32 @@ import javax.swing.table.TableCellRenderer;
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(307, 307, 307)
-                .addComponent(btnRefresh)
+                .addGap(44, 44, 44)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(124, 124, 124)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(124, 124, 124)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(284, 284, 284)
+                .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(284, 284, 284))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRefresh)
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(41, 41, 41))
+                .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -194,8 +196,9 @@ import javax.swing.table.TableCellRenderer;
         String matriz[][] = new String[ArrayListFuncionario.size()][14];
         
         for(int i=0;i<ArrayListFuncionario.size();i++){
-              matriz[i][0]= ArrayListFuncionario.get(i).getCargo();
+              
               matriz[i][1]= ArrayListFuncionario.get(i).getNome();
+              matriz[i][0]= ArrayListFuncionario.get(i).getCargo();
               matriz[i][2]= ArrayListFuncionario.get(i).getData_nasc();
               matriz[i][3]= ArrayListFuncionario.get(i).getSexo();
               matriz[i][5]= ArrayListFuncionario.get(i).getCpf();
@@ -212,7 +215,7 @@ import javax.swing.table.TableCellRenderer;
             jTable1.setModel(new javax.swing.table.DefaultTableModel(
             matriz,
             new String [] {
-               "Cargo", "Nome", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
+                "Nome","Cargo", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
                 "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
             }
         )); 

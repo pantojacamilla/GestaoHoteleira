@@ -1,5 +1,5 @@
 package views;
-                                /*GENTE ESTA TELA ESTA EM "BRANCO" OU SEJE NAÃ TEO O CÓDIGO QUE FAZ ELA FUNCIONAR*/
+    /*GENTE ESTA TELA ESTA EM "BRANCO" OU SEJE NÃO TEO O CÓDIGO QUE FAZ ELA FUNCIONAR*/
 /*
  * @author Davi 
  */

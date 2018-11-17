@@ -120,6 +120,11 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
 
         cargoF.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cargoF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "Administrador", "Recepcionista" }));
+        cargoF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargoFActionPerformed(evt);
+            }
+        });
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel14.setText("Cargo");
@@ -332,10 +337,10 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
 
     private void btnSaveFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveFuncActionPerformed
 /*     
-        Funcionario F = new Funcionario(cargoF.getActionCommand(), nomeF.getText(),nascF.getText(), 
-                                        sexoF.getActionCommand(), cpfF.getText(),
+        Funcionario F = new Funcionario(nomeF.getText(), cargoF.getSelectedItem(),nascF.getText(), 
+                                        sexoF.getSelectedItem(), cpfF.getText(),
                                         rgF.getText(), foneF.getText(), emailF.getText(),
-                                        paisF.getText(),ufF.getActionCommand(),
+                                        paisF.getText(),ufF.getSelectedItem(),
                                         cidadeF.getText(), bairroF.getText(), cepF.getText(),
                                         compleF.getText()); 
 
@@ -366,8 +371,9 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         String matriz[][] = new String[ArrayListFuncionario.size()][14];
         
         for(int i=0;i<ArrayListFuncionario.size();i++){
-              matriz[i][0]= ArrayListFuncionario.get(i).getCargo();
+              
               matriz[i][1]= ArrayListFuncionario.get(i).getNome();
+              matriz[i][0]= ArrayListFuncionario.get(i).getCargo();
               matriz[i][2]= ArrayListFuncionario.get(i).getData_nasc();
               matriz[i][3]= ArrayListFuncionario.get(i).getSexo();
               matriz[i][5]= ArrayListFuncionario.get(i).getCpf();
@@ -384,7 +390,7 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
             jTable1.setModel(new javax.swing.table.DefaultTableModel(
             matriz,
             new String [] {
-                "Nome", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
+                "Nome", "cargo","Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
                 "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
             }
         ));
@@ -400,6 +406,10 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     private void nomeFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeFActionPerformed
+
+    private void cargoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargoFActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
