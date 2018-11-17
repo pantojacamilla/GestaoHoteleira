@@ -1,7 +1,11 @@
 package views;
- 
-//import classes.Funcionario;
-//import java.util.ArrayList;
+
+import java.util.ArrayList;
+import pessoa.Administrador;
+import pessoa.Papel;
+import pessoa.Pessoa;
+import pessoa.Recepcionista;
+
 
 /*
  * @author Davi editado pela camilla
@@ -10,9 +14,18 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     
 //   ArrayList<Funcionario> ArrayListFuncionario = new ArrayList<> ();
     
+//Atualizando de acordo com o exemplo do professor    
+    ArrayList<Papel> listaPapel = new ArrayList<> ();
     
-    public TelaCadastroFuncionarioAdm( /*ArrayList<Funcionario> ArrayListFuncionario*/) {
+    Papel papel;
+    
+    public TelaCadastroFuncionarioAdm(ArrayList<Papel> listaPapel) {
 //        this.ArrayListFuncionario = ArrayListFuncionario;
+
+
+//Atualizando de acordo com o exemplo do professor  
+         this.listaPapel = listaPapel;
+
          initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -338,63 +351,59 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     private void btnSaveFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveFuncActionPerformed
 /*     
         Funcionario F = new Funcionario(nomeF.getText(), cargoF.getSelectedItem(),nascF.getText(), 
-                                        sexoF.getSelectedItem(), cpfF.getText(),
-                                        rgF.getText(), foneF.getText(), emailF.getText(),
+                                        sexoF.getSelectedItem(),rgF.getText() ,
+                                        cpfF.getText(), foneF.getText(), emailF.getText(),
                                         paisF.getText(),ufF.getSelectedItem(),
                                         cidadeF.getText(), bairroF.getText(), cepF.getText(),
                                         compleF.getText()); 
 
        this.ArrayListFuncionario.add(F);*/  
         
-        /*teste do PROFESSOR
+        /*TESTE DO PROFESSOR
         
         Pessoa pessoa = new Pessoa();
         pessoa.setDados();
         
         Papel papel;
+
         if(campo.getText.equals("Administrador")){
             papel = new Administrador();
             papel.setTipo("Administrador");
             
         }else if(campo.getText.equals("Recepicionista")){
-            
+            papel = new Recepcionista();
+            papel.setTipo("Recepcionista"); 
         }
         
         pessoa.setListaPapel(papel);
         
         papel.setPessoa(pessoa);*/
         
-        
-
-    }//GEN-LAST:event_btnSaveFuncActionPerformed
-/*    public void mostrar(){
-        String matriz[][] = new String[ArrayListFuncionario.size()][14];
-        
-        for(int i=0;i<ArrayListFuncionario.size();i++){
-              
-              matriz[i][1]= ArrayListFuncionario.get(i).getNome();
-              matriz[i][0]= ArrayListFuncionario.get(i).getCargo();
-              matriz[i][2]= ArrayListFuncionario.get(i).getData_nasc();
-              matriz[i][3]= ArrayListFuncionario.get(i).getSexo();
-              matriz[i][5]= ArrayListFuncionario.get(i).getCpf();
-              matriz[i][4]= ArrayListFuncionario.get(i).getRg();
-              matriz[i][6]= ArrayListFuncionario.get(i).getTelefone();
-              matriz[i][7]= ArrayListFuncionario.get(i).getEmail();
-              matriz[i][8]= ArrayListFuncionario.get(i).getPais();
-              matriz[i][9]= ArrayListFuncionario.get(i).getUf();
-              matriz[i][10]= ArrayListFuncionario.get(i).getCidade();
-              matriz[i][11]= ArrayListFuncionario.get(i).getBairro();
-              matriz[i][12]= ArrayListFuncionario.get(i).getCep();
-              matriz[i][13]= ArrayListFuncionario.get(i).getComplemento();
+//Atualizando de acordo com o exemplo do professor          
+           Pessoa pessoa = new Pessoa(nomeF.getText(),/* (String)cargoF.getSelectedItem(),*/nascF.getText(), 
+                                        (String)sexoF.getSelectedItem(), rgF.getText(),
+                                        cpfF.getText(), foneF.getText(), emailF.getText(),
+                                        paisF.getText(),(String)ufF.getSelectedItem(),
+                                        cidadeF.getText(), bairroF.getText(), cepF.getText(),
+                                        compleF.getText());  
+           
+//          Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
+           
+        if(cargoF.getSelectedItem().toString().equals("Administrador")){
+            papel = new Administrador();
+            papel.setTipo("Administrador");
+            
+        }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
+            papel = new Recepcionista();
+            papel.setTipo("Recepcionista"); 
         }
-            jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            matriz,
-            new String [] {
-                "Nome", "cargo","Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
-                "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
-            }
-        ));
-    }*/
+        
+        pessoa.setListaPapel(papel);
+        
+        papel.setPessoa(pessoa);
+       
+    }//GEN-LAST:event_btnSaveFuncActionPerformed
+
     private void sexoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoFActionPerformed
         // TODO add your handling codep here:
     }//GEN-LAST:event_sexoFActionPerformed

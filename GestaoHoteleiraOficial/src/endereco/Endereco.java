@@ -10,6 +10,17 @@ public class Endereco {
     private String bairro;
     private String cep; 
     private String complemento;
+    
+    
+//CONSTRUTOR
+    public Endereco(String pais, String uf, String cidade, String bairro, String cep, String complemento) {
+        this.pais = pais;
+        this.uf = uf;
+        this.cidade = cidade;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.complemento = complemento;
+    }
      
 // GETTERS E SETTERS
 

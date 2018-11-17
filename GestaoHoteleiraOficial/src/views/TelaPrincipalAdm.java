@@ -1,8 +1,8 @@
 package views;
 
-//import classes.Funcionario;
-//import java.util.ArrayList;
+import java.util.ArrayList;
 import javax.swing.JFrame;
+import pessoa.Papel;
 
 /*
  * @author Davi EDITADO PELA CAMILLA
@@ -13,7 +13,10 @@ import javax.swing.JFrame;
 
 public class TelaPrincipalAdm extends javax.swing.JFrame {
 //    ArrayList<Funcionario> ArrayListFuncionario = new ArrayList<>();
-            
+    
+//Atualizando de acordo com o exemplo do professor    
+      ArrayList<Papel> listaPapel = new ArrayList<>();   
+      
     public TelaPrincipalAdm() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
@@ -211,15 +214,27 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-/*          TelaCadastroFuncionarioAdm TelaCadFunc = new TelaCadastroFuncionarioAdm(this.ArrayListFuncionario);
+/*   TelaCadastroFuncionarioAdm TelaCadFunc = new TelaCadastroFuncionarioAdm(this.ArrayListFuncionario);
          jDesktopPane1.add(TelaCadFunc);
          TelaCadFunc.setVisible(true);*/  
+
+//Atualizando de acordo com o exemplo do professor
+         TelaCadastroFuncionarioAdm TelaCadFunc = new TelaCadastroFuncionarioAdm(this.listaPapel);
+         jDesktopPane1.add(TelaCadFunc);
+         TelaCadFunc.setVisible(true);
+         
+
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-/*           TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm(this.ArrayListFuncionario);
-         jDesktopPane1.add(TelaEditFunc);
-         TelaEditFunc.setVisible(true);*/ 
+/*      TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm(this.ArrayListFuncionario);
+        jDesktopPane1.add(TelaEditFunc);
+        TelaEditFunc.setVisible(true);*/ 
+
+//Atualizando de acordo com o exemplo do professor
+        TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm(this.listaPapel);
+        jDesktopPane1.add(TelaEditFunc);
+        TelaEditFunc.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -264,8 +279,8 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
  /*      TelaCadastroUsuario telaCadUser = new TelaCadastroUsuario();
-        desktop1.add(telaCadUser);
-        telaCadUser.setVisible(true);*/ 
+         desktop1.add(telaCadUser);
+         telaCadUser.setVisible(true);*/ 
 
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 

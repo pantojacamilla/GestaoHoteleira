@@ -4,7 +4,8 @@ import endereco.Endereco;
 import java.util.ArrayList;
 
 public class Pessoa extends Endereco{
-  
+    
+//ATRIBUTOS  
    private String nome;
    private String data_nasc;
    private String sexo;
@@ -14,7 +15,20 @@ public class Pessoa extends Endereco{
    private String email;
    
    ArrayList<Papel>  listaPapel = new ArrayList<>();
-    
+ 
+//CONSTRUTOR   
+    public Pessoa(String nome, String data_nasc, String sexo, String rg, String cpf, String telefone, String email, String pais, String uf, String cidade, String bairro, String cep, String complemento) {
+        super(pais, uf, cidade, bairro, cep, complemento);
+        this.nome = nome;
+        this.data_nasc = data_nasc;
+        this.sexo = sexo;
+        this.rg = rg;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.email = email;
+    }
+   
+//GETTERS E SETTERS    
     public String getNome() {
         return nome;
     }

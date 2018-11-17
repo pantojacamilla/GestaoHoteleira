@@ -1,22 +1,27 @@
 package views;
 
 
-//import classes.Funcionario;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
+import pessoa.Papel;
 
 
 
     public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
         
 //    ArrayList<Funcionario> ArrayListFuncionario  = new ArrayList<>();
- 
+        
+//Atualizando de acordo com o exemplo do professor    
+        ArrayList<Papel> listaPapel = new ArrayList<>(); 
     
-    public TelaEditaFuncionarioAdm(/*ArrayList<Funcionario> funcionarios*/) {
+    public TelaEditaFuncionarioAdm(ArrayList<Papel> listaPapel) {
 //        this.ArrayListFuncionario  = funcionarios;
+
+//Atualizando de acordo com o exemplo do professor    
+        this.listaPapel = listaPapel; 
         initComponents();
     }
     
@@ -189,6 +194,9 @@ import javax.swing.table.TableCellRenderer;
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+        //E AGORA ??!! COMO EU CRIO A TABELA
+
+
 //        mostrar();
     }//GEN-LAST:event_btnRefreshActionPerformed
 /*
