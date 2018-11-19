@@ -1,0 +1,19 @@
+
+  /*teste do PROFESSOR ORIGINAL
+        
+        Pessoa pessoa = new Pessoa();
+        pessoa.setDados();
+        
+        Papel papel;
+        if(campo.getText.equals("Administrador")){
+            papel = new Administrador();
+            papel.setTipo("Administrador");
+            
+        }else if(campo.getText.equals("Recepicionista")){
+            
+        }
+        
+        pessoa.setListaPapel(papel);
+        
+        papel.setPessoa(pessoa);
+*/

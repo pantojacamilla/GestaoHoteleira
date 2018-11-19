@@ -15,8 +15,8 @@ import javax.swing.table.TableCellRenderer;
     ArrayList<Funcionario> ArrayListFuncionario  = new ArrayList<>();
  
     
-    public TelaEditaFuncionarioAdm(ArrayList<Funcionario> funcionarios) {
-        this.ArrayListFuncionario  = funcionarios;
+    public TelaEditaFuncionarioAdm(ArrayList<Funcionario> ArrayListFuncionario) {
+        this.ArrayListFuncionario  = ArrayListFuncionario;
         initComponents();
     }
     

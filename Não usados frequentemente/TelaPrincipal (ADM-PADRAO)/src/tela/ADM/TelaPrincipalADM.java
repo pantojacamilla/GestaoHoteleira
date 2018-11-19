@@ -3,7 +3,7 @@ package tela.ADM;
 
 import javax.swing.JFrame;
 import tela.*;
-import tela.TelaCadastroUsuario;
+import tela.TelaCadastroUsuarioSistema;
 
 /*
  * @author Davi EDITADO PELA CAMILLA
@@ -287,7 +287,7 @@ public class TelaPrincipalADM extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
-            TelaCadastroUsuario telaCadUser = new TelaCadastroUsuario();
+            TelaCadastroUsuarioSistema telaCadUser = new TelaCadastroUsuarioSistema();
             desktop1.add(telaCadUser);
             telaCadUser.setVisible(true);
         

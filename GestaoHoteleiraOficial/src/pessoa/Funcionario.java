@@ -5,15 +5,7 @@ public abstract class Funcionario extends Papel{
     private Pessoa f;
     private String cargo;
     private double salario;
-    private boolean atividade = false;
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
+    private boolean atividade = false; //Referente a situação atual do funcionario
 
     public double getSalario() {
         return salario;

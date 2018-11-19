@@ -9,19 +9,19 @@ import tela.ADM.*;
 import tela.*;
 import tela.ADM.TelaCadastroFuncionario;
 import tela.ADM.TelaCadastroFuncionario;
-import tela.TelaCadastroUsuario;
-import tela.TelaCadastroUsuario;
+import tela.TelaCadastroUsuarioSistema;
+import tela.TelaCadastroUsuarioSistema;
 
 /**
  *
  * @author Davi
  */
-public class TelaPrincipalPADRAO extends javax.swing.JFrame {
+public class TelaPrincipalPadrao extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaPrincipal
      */
-    public TelaPrincipalPADRAO() {
+    public TelaPrincipalPadrao() {
         initComponents();
     }
 
@@ -229,14 +229,22 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalPADRAO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipalPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -249,7 +257,7 @@ public class TelaPrincipalPADRAO extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPrincipalPADRAO().setVisible(true);
+                new TelaPrincipalPadrao().setVisible(true);
             }
         });
     }
