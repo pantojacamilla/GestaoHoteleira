@@ -246,7 +246,7 @@ import pessoa.Recepcionista;
                 r.getPessoa().getCpf();
             } 
         }
- */      
+       
     
     
  public void mostrar(){  
@@ -305,12 +305,9 @@ import pessoa.Recepcionista;
                 "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
             }
         )); 
-    } 
-     
-       
-        
+    }   
     }
-
+*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton jButton1;
