@@ -16,8 +16,8 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     
 //Atualizando de acordo com o exemplo do professor    
     ArrayList<Papel> listaPapel = new ArrayList<> ();
-    
-    Papel papel;
+  
+   Papel adm, recep, papel;
     
     public TelaCadastroFuncionarioAdm(ArrayList<Papel> listaPapel) {
 //        this.ArrayListFuncionario = ArrayListFuncionario;
@@ -377,7 +377,8 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         
         pessoa.setListaPapel(papel);
         
-        papel.setPessoa(pessoa);*/
+        papel.setPessoa(pessoa);
+*/
         
 //Atualizando de acordo com o exemplo do professor          
            Pessoa pessoa = new Pessoa(nomeF.getText(),/* (String)cargoF.getSelectedItem(),*/nascF.getText(), 
@@ -390,18 +391,26 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
 //          Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
            
         if(cargoF.getSelectedItem().toString().equals("Administrador")){
+            
             papel = new Administrador();
             papel.setTipo("Administrador");
+            
+          //  pessoa.setListaPapel(papel);
+          //  papel.setPessoa(pessoa);
             
         }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
             papel = new Recepcionista();
             papel.setTipo("Recepcionista"); 
+           // pessoa.setListaPapel(papel);
+          //  papel.setPessoa(pessoa);
         }
         
-        pessoa.setListaPapel(papel);
+       pessoa.setListaPapel(papel);
+       papel.setPessoa(pessoa);
         
-        papel.setPessoa(pessoa);
-       
+        
+        
+        
     }//GEN-LAST:event_btnSaveFuncActionPerformed
 
     private void sexoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoFActionPerformed
