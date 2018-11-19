@@ -2,6 +2,7 @@ package pessoa;
 
 public abstract class Funcionario extends Papel{
     
+    private Pessoa f;
     private String cargo;
     private double salario;
     private boolean atividade = false;
@@ -29,6 +30,12 @@ public abstract class Funcionario extends Papel{
     public void setAtividade(boolean atividade) {
         this.atividade = atividade;
     }
-    
-    
+
+    public Pessoa getF() {
+        return f;
+    }
+
+    public void setF(Pessoa f) {
+        this.f = f;
+    }  
 }

@@ -13,6 +13,7 @@ public class Pessoa extends Endereco{
    private String telefone;
    private String email;
     ArrayList<Papel>  listaPapel = new ArrayList<>();
+    ArrayList<Funcionario> listaFunc = new ArrayList<>();
     
     public String getNome() {
         return nome;
@@ -82,4 +83,15 @@ public class Pessoa extends Endereco{
       this.listaPapel.add(p);
    }
 
+    public ArrayList<Funcionario> getListaFunc() {
+        return listaFunc;
+    }
+
+    public void setListaFuncionarios(ArrayList<Funcionario> listaFunc) {
+        this.listaFunc = listaFunc;
+    }
+   
+   public void setListaFuncionario(Funcionario f){
+       this.listaFunc.add(f);
+   }
 }
