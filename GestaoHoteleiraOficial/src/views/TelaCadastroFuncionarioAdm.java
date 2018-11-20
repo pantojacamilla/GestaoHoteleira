@@ -411,16 +411,18 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         }
 */
    //  Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
-     Papel papel;
+    Papel papel;
     if(cargoF.getSelectedItem().toString().equals("Administrador")){
             papel = new Administrador();
             papel.setTipo("Administrador");
+            
             pessoa.setListaPapel(papel);
             papel.setPessoa(pessoa);
        
         }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
             papel = new Recepcionista();
             papel.setTipo("Recepcionista"); 
+            
             pessoa.setListaPapel(papel);
             papel.setPessoa(pessoa);
         }

@@ -2,22 +2,15 @@ package views;
 
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 import pessoa.Administrador;
 import pessoa.Papel;
-import pessoa.Pessoa;
 import pessoa.Recepcionista;
 
 
 
-    public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
+public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
         
 //    ArrayList<Funcionario> ArrayListFuncionario  = new ArrayList<>();
         
@@ -217,7 +210,7 @@ import pessoa.Recepcionista;
         mostrar();       
     }//GEN-LAST:event_btnRefreshActionPerformed
     
-    void mostrar(){
+    public void mostrar(){
    
         Administrador adm =  new Administrador();
         adm.setTipo("Administrador");  
@@ -225,46 +218,77 @@ import pessoa.Recepcionista;
         
         Recepcionista recep = new Recepcionista();
         recep.setTipo("Recepicionista");
-        listaPapel.add(adm);
+        listaPapel.add(recep);
         
         for (Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();) {
             Papel papel = iterator.next();
         
             if(papel.getTipo().equals("Administrador")){
-               adm = (Administrador) papel;
-               
-                adm.getPessoa().getNome();    
-                adm.getTipo();
-                adm.getPessoa().getData_nasc(); 
-                adm.getPessoa().getSexo();
-                adm.getPessoa().getRg();        
-                adm.getPessoa().getCpf();
-                adm.getPessoa().getTelefone();  
-                adm.getPessoa().getEmail();
-                adm.getPessoa().getPais();       
-                adm.getPessoa().getUf();  
-                adm.getPessoa().getCidade();    
-                adm.getPessoa().getBairro();
-                adm.getPessoa().getCep(); 
-                adm.getPessoa().getComplemento();
-            }else if(papel.getTipo().equals("Recepicionista")){
-                recep = (Recepcionista) papel;
+                adm = (Administrador) papel;
                 
-                recep.getPessoa().getNome();
-                recep.getTipo();
-                recep.getPessoa().getData_nasc(); 
-                recep.getPessoa().getSexo();
-                recep.getPessoa().getRg();        
-                recep.getPessoa().getCpf();
-                recep.getPessoa().getTelefone();  
-                recep.getPessoa().getEmail();
-                recep.getPessoa().getPais();       
-                recep.getPessoa().getUf();  
-                recep.getPessoa().getCidade();    
-                recep.getPessoa().getBairro();
-                recep.getPessoa().getCep(); 
-                recep.getPessoa().getComplemento();
+                DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
+                
+                jTable.addRow(new Object[] { 
+                adm.getPessoa().getNome(),    
+                adm.getTipo(),
+                adm.getPessoa().getData_nasc(), 
+                adm.getPessoa().getSexo(),
+                adm.getPessoa().getRg(),        
+                adm.getPessoa().getCpf(),
+                adm.getPessoa().getTelefone(), 
+                adm.getPessoa().getEmail(),
+                adm.getPessoa().getPais(),       
+                adm.getPessoa().getUf(),  
+                adm.getPessoa().getCidade(),   
+                adm.getPessoa().getBairro(),
+                adm.getPessoa().getCep(), 
+                adm.getPessoa().getComplemento(),
+                });
+              
+                
+            }else if(papel.getTipo().equals("Recepicionista")){
+               recep = (Recepcionista) papel;
+                
+                DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
+ 
+                jTable.addRow(new Object[] {  
+                recep.getPessoa().getNome(),
+                recep.getTipo(),
+                recep.getPessoa().getData_nasc(),
+                recep.getPessoa().getSexo(),
+                recep.getPessoa().getRg(),        
+                recep.getPessoa().getCpf(),
+                recep.getPessoa().getTelefone(),  
+                recep.getPessoa().getEmail(),
+                recep.getPessoa().getPais(),       
+                recep.getPessoa().getUf(),  
+                recep.getPessoa().getCidade(),    
+                recep.getPessoa().getBairro(),
+                recep.getPessoa().getCep(), 
+                recep.getPessoa().getComplemento(),
+                });
             }  
+/*         
+            DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
+            jTable.addRow(new Object[] {
+                papel.getPessoa().getNome(), 
+                papel.getTipo(),
+                papel.getPessoa().getData_nasc(), 
+                papel.getPessoa().getSexo(),
+                papel.getPessoa().getRg(), 
+                papel.getPessoa().getCpf(), 
+                papel.getPessoa().getTelefone(),
+                papel.getPessoa().getEmail(),
+                papel.getPessoa().getPais(), 
+                papel.getPessoa().getUf(), 
+                papel.getPessoa().getCidade(), 
+                papel.getPessoa().getBairro(),
+                papel.getPessoa().getCep(), 
+                papel.getPessoa().getComplemento()
+            }
+                         
+            );
+  */              
         }
     }
 /* 
