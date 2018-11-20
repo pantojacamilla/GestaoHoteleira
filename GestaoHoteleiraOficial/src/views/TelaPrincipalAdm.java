@@ -3,6 +3,7 @@ package views;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import pessoa.Papel;
+import pessoa.Pessoa;
 
 /*
  * @author Davi EDITADO PELA CAMILLA
@@ -16,6 +17,7 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     
 //Atualizando de acordo com o exemplo do professor    
       ArrayList<Papel> listaPapel = new ArrayList<>();   
+      ArrayList<Pessoa> listaPessoa = new ArrayList<>();
       
     public TelaPrincipalAdm() {
         initComponents();

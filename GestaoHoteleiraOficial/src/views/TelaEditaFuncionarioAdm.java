@@ -212,19 +212,11 @@ public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
     
     public void mostrar(){
    
-        Administrador adm =  new Administrador();
-        adm.setTipo("Administrador");  
-        listaPapel.add(adm);
-        
-        Recepcionista recep = new Recepcionista();
-        recep.setTipo("Recepicionista");
-        listaPapel.add(recep);
-        
         for (Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();) {
             Papel papel = iterator.next();
         
             if(papel.getTipo().equals("Administrador")){
-                adm = (Administrador) papel;
+                Administrador adm = (Administrador) papel;
                 
                 DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
                 
@@ -247,7 +239,7 @@ public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
               
                 
             }else if(papel.getTipo().equals("Recepicionista")){
-               recep = (Recepcionista) papel;
+                Recepcionista recep = (Recepcionista) papel;
                 
                 DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
  
@@ -268,27 +260,7 @@ public class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
                 recep.getPessoa().getComplemento(),
                 });
             }  
-/*         
-            DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
-            jTable.addRow(new Object[] {
-                papel.getPessoa().getNome(), 
-                papel.getTipo(),
-                papel.getPessoa().getData_nasc(), 
-                papel.getPessoa().getSexo(),
-                papel.getPessoa().getRg(), 
-                papel.getPessoa().getCpf(), 
-                papel.getPessoa().getTelefone(),
-                papel.getPessoa().getEmail(),
-                papel.getPessoa().getPais(), 
-                papel.getPessoa().getUf(), 
-                papel.getPessoa().getCidade(), 
-                papel.getPessoa().getBairro(),
-                papel.getPessoa().getCep(), 
-                papel.getPessoa().getComplemento()
-            }
-                         
-            );
-  */              
+
         }
     }
 /* 

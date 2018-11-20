@@ -1,6 +1,8 @@
 package views;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import javax.swing.JOptionPane;
 import pessoa.Administrador;
 import pessoa.Papel;
 import pessoa.Pessoa;
@@ -15,7 +17,8 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
 //   ArrayList<Funcionario> ArrayListFuncionario = new ArrayList<> ();
     
 //Atualizando de acordo com o exemplo do professor    
-    ArrayList<Papel> listaPapel = new ArrayList<> ();
+    ArrayList<Papel> listaPapel;
+    ArrayList<Pessoa> listaPessoa;
     
     
     public TelaCadastroFuncionarioAdm(ArrayList<Papel> listaPapel) {
@@ -346,89 +349,40 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveFuncActionPerformed
-/*     
-        Funcionario F = new Funcionario(nomeF.getText(), cargoF.getSelectedItem(),nascF.getText(), 
-                                        sexoF.getSelectedItem(),rgF.getText() ,
-                                        cpfF.getText(), foneF.getText(), emailF.getText(),
-                                        paisF.getText(),ufF.getSelectedItem(),
-                                        cidadeF.getText(), bairroF.getText(), cepF.getText(),
-                                        compleF.getText()); 
 
-       this.ArrayListFuncionario.add(F);*/  
-        
-        /*TESTE DO PROFESSOR
-        
-        Pessoa pessoa = new Pessoa();
-        pessoa.setDados();
-        
+        //Atualizando de acordo com o exemplo do professor          
+        Pessoa pessoa = new Pessoa(nomeF.getText(),/* (String)cargoF.getSelectedItem(),*/ nascF.getText(),
+                (String) sexoF.getSelectedItem(), rgF.getText(),
+                cpfF.getText(), foneF.getText(), emailF.getText(),
+                paisF.getText(), (String) ufF.getSelectedItem(),
+                cidadeF.getText(), bairroF.getText(), cepF.getText(),
+                compleF.getText());
+
+               
+        //  Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
         Papel papel;
-
-        if(campo.getText.equals("Administrador")){
+        if (cargoF.getSelectedItem().toString().equals("Administrador")) {
+                        
             papel = new Administrador();
             papel.setTipo("Administrador");
             
-        }else if(campo.getText.equals("Recepicionista")){
-            papel = new Recepcionista();
-            papel.setTipo("Recepcionista"); 
-        }
-        
-        pessoa.setListaPapel(papel);
-        
-        papel.setPessoa(pessoa);
-*/
-        
-//Atualizando de acordo com o exemplo do professor          
-           Pessoa pessoa = new Pessoa(nomeF.getText(),/* (String)cargoF.getSelectedItem(),*/nascF.getText(), 
-                                        (String)sexoF.getSelectedItem(), rgF.getText(),
-                                        cpfF.getText(), foneF.getText(), emailF.getText(),
-                                        paisF.getText(),(String)ufF.getSelectedItem(),
-                                        cidadeF.getText(), bairroF.getText(), cepF.getText(),
-                                        compleF.getText()); 
-           
-           
-//          Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
-        // Administrador adm = new Administrador();
-        //adm.setTipo("Administrador");
-        
-        
-     //   Recepcionista recep = new Recepcionista();
-      //  recep.setTipo("Recepicionista");
-      //  listaPapel.add(recep);
-      
-/* 
-        if(cargoF.getSelectedItem().toString().equals("Administrador")){
-            Administrador adm = new Administrador();
-            adm.setTipo("Administrador");
 
-            adm.setPessoa(pessoa);
-            pessoa.setListaPapel(adm);
-            
-        }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
-            Recepcionista recep = new Recepcionista();
-            recep.setTipo("Recepcionista"); 
-            recep.setPessoa(pessoa);
-            pessoa.setListaPapel(recep);
-        }
-*/
-   //  Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
-    Papel papel;
-    if(cargoF.getSelectedItem().toString().equals("Administrador")){
-            papel = new Administrador();
-            papel.setTipo("Administrador");
-            
             pessoa.setListaPapel(papel);
             papel.setPessoa(pessoa);
-       
-        }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
+            
+            this.listaPapel.add(papel);
+
+        } else if (cargoF.getSelectedItem().toString().equals("Recepicionista")){ 
             papel = new Recepcionista();
-            papel.setTipo("Recepcionista"); 
-            
+                    
+            papel.setTipo("Recepcionista");
+
             pessoa.setListaPapel(papel);
             papel.setPessoa(pessoa);
+            
+            this.listaPapel.add(papel);
         }
     
- 
-        
     }//GEN-LAST:event_btnSaveFuncActionPerformed
 
     private void sexoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoFActionPerformed
