@@ -17,3 +17,48 @@
         
         papel.setPessoa(pessoa);
 */
+
+
+
+
+
+
+
+    /* 
+        for (Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();) {
+            Papel papel = iterator.next();
+        
+            if(papel.getTipo().equals("Administrador")){
+                adm = (Administrador) papel;
+                adm.getPessoa().getNome();
+            }else if(papel.getTipo().equals("Recepicionista")){
+                recep = (Recepcionista) papel;
+                recep.getPessoa().getCpf();
+            } 
+        }
+        */  
+    
+    /* OUTRO exemplo professor  (19/11/18)
+    public void mostrar(){
+        ArrayList<Papel> papeis = new ArrayList();
+        
+        Administrador a = new Administrador();
+        a.setTipo("Administrador");
+        papeis.add(a);
+        
+        Recepcionista r = new Recepcionista();
+        r.setTipo("Recepicionista");
+        papeis.add(r);
+        
+        for (Iterator<Papel> iterator = papeis.iterator(); iterator.hasNext();) {
+            Papel papel = iterator.next();
+        
+            if(papel.getTipo().equals("Administrador")){
+                a = (Administrador) papel;
+                a.getPessoa().getNome();
+            }else if(papel.getTipo().equals("Recepicionista")){
+                r = (Recepcionista) papel;
+                r.getPessoa().getCpf();
+            } 
+        }
+*/ 

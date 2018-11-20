@@ -17,7 +17,7 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
 //Atualizando de acordo com o exemplo do professor    
     ArrayList<Papel> listaPapel = new ArrayList<> ();
   
-   Papel adm, recep, papel;
+    Papel papel;
     
     public TelaCadastroFuncionarioAdm(ArrayList<Papel> listaPapel) {
 //        this.ArrayListFuncionario = ArrayListFuncionario;
@@ -389,26 +389,21 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
                                         compleF.getText());  
            
 //          Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
-           
-        if(cargoF.getSelectedItem().toString().equals("Administrador")){
+       
+        if(cargoF.getSelectedItem().equals("Administrador")){
+            Administrador adm = new Administrador();
+            adm.setTipo("Administrador");
+     
+            pessoa.setListaPapel(adm);
+            adm.setPessoa(pessoa);
             
-            papel = new Administrador();
-            papel.setTipo("Administrador");
+        }else if(cargoF.getSelectedItem().equals("Recepicionista")){
+            Recepcionista recep = new Recepcionista();
+            recep.setTipo("Recepcionista"); 
             
-          //  pessoa.setListaPapel(papel);
-          //  papel.setPessoa(pessoa);
-            
-        }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
-            papel = new Recepcionista();
-            papel.setTipo("Recepcionista"); 
-           // pessoa.setListaPapel(papel);
-          //  papel.setPessoa(pessoa);
+            pessoa.setListaPapel(recep);
+            recep.setPessoa(pessoa);
         }
-        
-       pessoa.setListaPapel(papel);
-       papel.setPessoa(pessoa);
-        
-        
         
         
     }//GEN-LAST:event_btnSaveFuncActionPerformed
@@ -424,7 +419,6 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     private void nomeFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeFActionPerformed
-
     private void cargoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cargoFActionPerformed
