@@ -214,36 +214,11 @@ import pessoa.Recepcionista;
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         //E AGORA ??!! COMO EU CRIO A TABELA
-        mostrar();
-        DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
-            
-        for (Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();) {
-            Papel papel = iterator.next();
-                
-                Object[] dados = {
-                papel.getPessoa().getNome(),    
-                papel.getTipo(),
-                papel.getPessoa().getData_nasc(), 
-                papel.getPessoa().getSexo(),
-                papel.getPessoa().getRg(),        
-                papel.getPessoa().getCpf(),
-                papel.getPessoa().getTelefone(),  
-                papel.getPessoa().getEmail(),
-                papel.getPessoa().getPais(),     
-                papel.getPessoa().getUf(),  
-                papel.getPessoa().getCidade(),    
-                papel.getPessoa().getBairro(),
-                papel.getPessoa().getCep(), 
-                papel.getPessoa().getComplemento()};
-                jTable.addRow(dados);
-            }
-       
-                
+        mostrar();       
     }//GEN-LAST:event_btnRefreshActionPerformed
     
     void mostrar(){
-    
-      
+   
         Administrador adm =  new Administrador();
         adm.setTipo("Administrador");  
         listaPapel.add(adm);
