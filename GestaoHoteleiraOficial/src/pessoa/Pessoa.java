@@ -14,7 +14,7 @@ public class Pessoa extends Endereco{
    private String telefone;
    private String email;
    
-   public ArrayList<Papel>  listaPapel = new ArrayList<>();
+   ArrayList<Papel>  listaPapel = new ArrayList<>();
  
 //CONSTRUTOR   
     public Pessoa(String nome, String data_nasc, String sexo, String rg, String cpf, String telefone, String email, String pais, String uf, String cidade, String bairro, String cep, String complemento) {
