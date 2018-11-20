@@ -8,6 +8,7 @@ import java.util.Set;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import pessoa.Administrador;
 import pessoa.Papel;
@@ -22,17 +23,26 @@ import pessoa.Recepcionista;
         
 //Atualizando de acordo com o exemplo do professor    
         ArrayList<Papel> listaPapel = new ArrayList<>(); 
-    Papel papel;
-    
+     
    public TelaEditaFuncionarioAdm(ArrayList<Papel> listaPapel) {
 //        this.ArrayListFuncionario  = funcionarios;
-
-//Atualizando de acordo com o exemplo do professor    
+  
         this.listaPapel = listaPapel; 
+        
         initComponents();
     }
     
-   
+       public void limparLinhas() {
+
+        DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
+
+        while (jTable .getRowCount() > 0) {
+            jTable .setRowCount(0);
+        } 
+    }
+       
+       
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -72,6 +82,7 @@ import pessoa.Recepcionista;
         //
 
         //header center alignment
+        /*
         TableCellRenderer centerRendererHeader = jTable1.getTableHeader().getDefaultRenderer();
         JLabel headerLabel = (JLabel) centerRendererHeader;
         headerLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -80,6 +91,7 @@ import pessoa.Recepcionista;
         DefaultTableCellRenderer centerRendererColumn = new DefaultTableCellRenderer();
         centerRendererColumn.setHorizontalAlignment(SwingConstants.CENTER);
         jTable1.setDefaultRenderer(String.class, centerRendererColumn);
+        */
 
         //
         jTable1.getTableHeader().setReorderingAllowed(false);
@@ -203,40 +215,102 @@ import pessoa.Recepcionista;
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         //E AGORA ??!! COMO EU CRIO A TABELA
         mostrar();
+        DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
+            
+        for (Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();) {
+            Papel papel = iterator.next();
+                
+                Object[] dados = {
+                papel.getPessoa().getNome(),    
+                papel.getTipo(),
+                papel.getPessoa().getData_nasc(), 
+                papel.getPessoa().getSexo(),
+                papel.getPessoa().getRg(),        
+                papel.getPessoa().getCpf(),
+                papel.getPessoa().getTelefone(),  
+                papel.getPessoa().getEmail(),
+                papel.getPessoa().getPais(),     
+                papel.getPessoa().getUf(),  
+                papel.getPessoa().getCidade(),    
+                papel.getPessoa().getBairro(),
+                papel.getPessoa().getCep(), 
+                papel.getPessoa().getComplemento()};
+                jTable.addRow(dados);
+            }
+       
+                
     }//GEN-LAST:event_btnRefreshActionPerformed
     
-    public void mostrar(){   
-     
-            
-        String matriz[][] = new String[listaPapel.size()][14];
-        for(int i=0;i<listaPapel.size();i++){
-             
-              matriz[i][0]= listaPapel.get(i).getPessoa().getNome();
-              matriz[i][1]= listaPapel.get(i).getTipo();
-              matriz[i][2]= listaPapel.get(i).getPessoa().getData_nasc();
-              matriz[i][3]= listaPapel.get(i).getPessoa().getSexo();
-              matriz[i][5]= listaPapel.get(i).getPessoa().getCpf();
-              matriz[i][4]= listaPapel.get(i).getPessoa().getRg();
-              matriz[i][6]= listaPapel.get(i).getPessoa().getTelefone();
-              matriz[i][7]= listaPapel.get(i).getPessoa().getEmail();
-              matriz[i][8]= listaPapel.get(i).getPessoa().getPais();
-              matriz[i][9]= listaPapel.get(i).getPessoa().getUf();
-              matriz[i][10]= listaPapel.get(i).getPessoa().getCidade();
-              matriz[i][11]= listaPapel.get(i).getPessoa().getBairro();
-              matriz[i][12]= listaPapel.get(i).getPessoa().getCep();
-              matriz[i][13]= listaPapel.get(i).getPessoa().getComplemento();
+    void mostrar(){
+    
+      
+        Administrador adm =  new Administrador();
+        adm.setTipo("Administrador");  
+        listaPapel.add(adm);
+        
+        Recepcionista recep = new Recepcionista();
+        recep.setTipo("Recepicionista");
+        listaPapel.add(adm);
+        
+        for (Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();) {
+            Papel papel = iterator.next();
+        
+            if(papel.getTipo().equals("Administrador")){
+               adm = (Administrador) papel;
+               
+                adm.getPessoa().getNome();    
+                adm.getTipo();
+                adm.getPessoa().getData_nasc(); 
+                adm.getPessoa().getSexo();
+                adm.getPessoa().getRg();        
+                adm.getPessoa().getCpf();
+                adm.getPessoa().getTelefone();  
+                adm.getPessoa().getEmail();
+                adm.getPessoa().getPais();       
+                adm.getPessoa().getUf();  
+                adm.getPessoa().getCidade();    
+                adm.getPessoa().getBairro();
+                adm.getPessoa().getCep(); 
+                adm.getPessoa().getComplemento();
+            }else if(papel.getTipo().equals("Recepicionista")){
+                recep = (Recepcionista) papel;
+                
+                recep.getPessoa().getNome();
+                recep.getTipo();
+                recep.getPessoa().getData_nasc(); 
+                recep.getPessoa().getSexo();
+                recep.getPessoa().getRg();        
+                recep.getPessoa().getCpf();
+                recep.getPessoa().getTelefone();  
+                recep.getPessoa().getEmail();
+                recep.getPessoa().getPais();       
+                recep.getPessoa().getUf();  
+                recep.getPessoa().getCidade();    
+                recep.getPessoa().getBairro();
+                recep.getPessoa().getCep(); 
+                recep.getPessoa().getComplemento();
+            }  
         }
-            jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            matriz,
-            new String [] {
-                "Nome","Cargo", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", 
-                "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
-            }
-        )); 
     }
+/* 
+    void mostrar(){
+        
+        DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
 
-   
-
+        for (Papel papel  : listaPapel) {
+           
+            for (Iterator<Papel> iterator = papel.getPessoa().getListaPapel().iterator(); iterator.hasNext();) {
+                    Papel papel1 = iterator.next();
+                    
+                    Object[] dados = {papel.getPessoa().getNome(), papel.getTipo(),papel.getPessoa().getData_nasc(), papel.getPessoa().getSexo(),
+                    papel.getPessoa().getRg(), papel.getPessoa().getCpf(), papel.getPessoa().getTelefone(), papel.getPessoa().getEmail(),
+                    papel.getPessoa().getPais(), papel.getPessoa().getUf(), papel.getPessoa().getCidade(), papel.getPessoa().getBairro(),
+                    papel.getPessoa().getCep(), papel.getPessoa().getComplemento()};
+                    jTable.addRow(dados);
+            }
+        }
+    }
+*/       
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton jButton1;

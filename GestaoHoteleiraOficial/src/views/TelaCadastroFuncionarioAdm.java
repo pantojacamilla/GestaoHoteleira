@@ -16,16 +16,13 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     
 //Atualizando de acordo com o exemplo do professor    
     ArrayList<Papel> listaPapel = new ArrayList<> ();
-  
-    Papel papel;
+    
     
     public TelaCadastroFuncionarioAdm(ArrayList<Papel> listaPapel) {
-//        this.ArrayListFuncionario = ArrayListFuncionario;
-
+//this.ArrayListFuncionario = ArrayListFuncionario;
 
 //Atualizando de acordo com o exemplo do professor  
          this.listaPapel = listaPapel;
-
          initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -386,25 +383,49 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
                                         cpfF.getText(), foneF.getText(), emailF.getText(),
                                         paisF.getText(),(String)ufF.getSelectedItem(),
                                         cidadeF.getText(), bairroF.getText(), cepF.getText(),
-                                        compleF.getText());  
+                                        compleF.getText()); 
+           
            
 //          Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
-       
-        if(cargoF.getSelectedItem().equals("Administrador")){
+        // Administrador adm = new Administrador();
+        //adm.setTipo("Administrador");
+        
+        
+     //   Recepcionista recep = new Recepcionista();
+      //  recep.setTipo("Recepicionista");
+      //  listaPapel.add(recep);
+      
+/* 
+        if(cargoF.getSelectedItem().toString().equals("Administrador")){
             Administrador adm = new Administrador();
             adm.setTipo("Administrador");
-     
-            pessoa.setListaPapel(adm);
+
             adm.setPessoa(pessoa);
+            pessoa.setListaPapel(adm);
             
-        }else if(cargoF.getSelectedItem().equals("Recepicionista")){
+        }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
             Recepcionista recep = new Recepcionista();
             recep.setTipo("Recepcionista"); 
-            
-            pessoa.setListaPapel(recep);
             recep.setPessoa(pessoa);
+            pessoa.setListaPapel(recep);
         }
-        
+*/
+   //  Papel papel;  [se colocado aqui gera o erro "variável pode não ter sido inicializada"]
+     Papel papel;
+    if(cargoF.getSelectedItem().toString().equals("Administrador")){
+            papel = new Administrador();
+            papel.setTipo("Administrador");
+            pessoa.setListaPapel(papel);
+            papel.setPessoa(pessoa);
+       
+        }else if(cargoF.getSelectedItem().toString().equals("Recepicionista")){
+            papel = new Recepcionista();
+            papel.setTipo("Recepcionista"); 
+            pessoa.setListaPapel(papel);
+            papel.setPessoa(pessoa);
+        }
+    
+ 
         
     }//GEN-LAST:event_btnSaveFuncActionPerformed
 
