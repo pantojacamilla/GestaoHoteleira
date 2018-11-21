@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import pessoa.Papel;
 
 /*
- * @author Davi
+ * @author Davi editado pela Camilla
  */
 public class TelaPrincipalPadrao extends javax.swing.JFrame {
      ArrayList<Papel> listaPapel = new ArrayList<>();   
@@ -167,7 +167,10 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        TelaEditaHospede TelaEditaHosp = new TelaEditaHospede(this.listaPapel);
+        desktop1.add(TelaEditaHosp);
+        TelaEditaHosp.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
