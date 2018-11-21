@@ -63,14 +63,14 @@ public class TelaEditaQuarto extends javax.swing.JInternalFrame {
             }
         ));
         //header center alignment
-        TableCellRenderer centerRendererHeader = jTable1.getTableHeader().getDefaultRenderer();
+        TableCellRenderer centerRendererHeader = jTable2.getTableHeader().getDefaultRenderer();
         JLabel headerLabel = (JLabel) centerRendererHeader;
         headerLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         //Columns center alignment
         DefaultTableCellRenderer centerRendererColumn = new DefaultTableCellRenderer();
         centerRendererColumn.setHorizontalAlignment(SwingConstants.CENTER);
-        jTable1.setDefaultRenderer(Object.class, centerRendererColumn);
+        jTable2.setDefaultRenderer(Object.class, centerRendererColumn);
 
         /////
         jTable2.getTableHeader().setReorderingAllowed(false);
