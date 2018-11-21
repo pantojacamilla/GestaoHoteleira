@@ -176,15 +176,10 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTable1MouseClicked
     
     public void mostrar(){
-        
-         
-        
         DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
-        
         while (jTable.getRowCount() > 0) {
             jTable.setRowCount(0);
         }
-        
         for(Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();){
             
             Papel papel = iterator.next();
