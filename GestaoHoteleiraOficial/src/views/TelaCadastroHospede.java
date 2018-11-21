@@ -391,7 +391,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
             
         }else{  
      //    
-           salarioH.setText("0"); 
+            salarioH.setText("0"); 
             Pessoa pessoa = new Pessoa(nomeH.getText(),Double.parseDouble(salarioH.getText()),
                     nascH.getText(),
                     (String) sexoH.getSelectedItem(), rgH.getText(),
@@ -406,7 +406,6 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
                     papel.setTipo("Hospede");
                     pessoa.setListaPapel(papel);
                     papel.setPessoa(pessoa);
-                  //  pessoa.setSalario(salario);
                     this.listaPapel.add(papel);
           
                     JOptionPane.showMessageDialog(null, "Hospede adicionado com SUCESSO !!!");  

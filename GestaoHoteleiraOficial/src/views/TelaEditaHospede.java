@@ -178,8 +178,6 @@ public final class TelaEditaHospede extends javax.swing.JInternalFrame {
             
             Object[] dados = {
                 papel.getPessoa().getNome(),
-               // papel.getTipo(),
-               // papel.getPessoa().getSalario(),
                 papel.getPessoa().getData_nasc(), 
                 papel.getPessoa().getSexo(),
                 papel.getPessoa().getRg(), 
