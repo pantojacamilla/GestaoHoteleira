@@ -25,12 +25,12 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         desktop1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
@@ -43,7 +43,7 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Principal - (PADRÃO)");
 
-        desktop1.setBackground(new java.awt.Color(153, 255, 102));
+        desktop1.setBackground(new java.awt.Color(0, 255, 0));
 
         javax.swing.GroupLayout desktop1Layout = new javax.swing.GroupLayout(desktop1);
         desktop1.setLayout(desktop1Layout);
@@ -53,28 +53,8 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
         );
         desktop1Layout.setVerticalGroup(
             desktop1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addGap(0, 581, Short.MAX_VALUE)
         );
-
-        jMenu3.setText("Dependências");
-
-        jMenuItem6.setText("Visualizar Info Hotel");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem6);
-
-        jMenuItem8.setText("Visualizar Quartos");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem8);
-
-        jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Hóspedes");
 
@@ -95,6 +75,26 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
         jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Dependências");
+
+        jMenuItem6.setText("Visualizar Info Hotel");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem6);
+
+        jMenuItem8.setText("Visualizar Quartos");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem8);
+
+        jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Reservas");
 

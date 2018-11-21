@@ -63,3 +63,15 @@
             } 
         }
 */ 
+
+
+
+
+/*       
+            if(papel.getTipo().equals("Administrador")){
+                Administrador adm = (Administrador) papel;
+                
+            }else if(papel.getTipo().equals("Recepicionista")){
+                Recepcionista recep = (Recepcionista) papel;
+              
+            } */ 

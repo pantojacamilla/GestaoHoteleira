@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package views;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author pc13-sala06
- */
 public class TelaLogin extends javax.swing.JFrame {
 
     public TelaLogin() {
@@ -123,14 +114,18 @@ public class TelaLogin extends javax.swing.JFrame {
     private void btnAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcessarActionPerformed
         // Botão Acessar - Login e Senha
         
-        if(txtSenha.getPassword().equals("admin")&&txtLogin.getText().equals("admin")){
+        if(txtSenha.getText().equals("admin")&&txtLogin.getText().equals("admin")){
             
-            JOptionPane.showMessageDialog(null, "Bem vindo");
+            TelaPrincipalAdm telaPrincipAdm = new TelaPrincipalAdm();
+            telaPrincipAdm.setVisible(true);
+            
+        }else if(txtSenha.getText().equals("recep")&&txtLogin.getText().equals("recep")){
+            
+            TelaPrincipalPadrao telaPrincipPadrao = new TelaPrincipalPadrao();
+            telaPrincipPadrao.setVisible(true);
             
         }else{
-            
             JOptionPane.showMessageDialog(null, "Acesso Negado");
-            
         }    
         
     }//GEN-LAST:event_btnAcessarActionPerformed

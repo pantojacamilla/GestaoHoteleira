@@ -7,6 +7,7 @@ public class Pessoa extends Endereco{
     
 //ATRIBUTOS  
    private String nome;
+   private double salario;
    private String data_nasc;
    private String sexo;
    private String rg;
@@ -17,9 +18,10 @@ public class Pessoa extends Endereco{
    ArrayList<Papel>  listaPapel = new ArrayList<>();
  
 //CONSTRUTOR   
-    public Pessoa(String nome, String data_nasc, String sexo, String rg, String cpf, String telefone, String email, String pais, String uf, String cidade, String bairro, String cep, String complemento) {
+    public Pessoa(String nome,Double salario, String data_nasc, String sexo, String rg, String cpf, String telefone, String email, String pais, String uf, String cidade, String bairro, String cep, String complemento) {
         super(pais, uf, cidade, bairro, cep, complemento);
         this.nome = nome;
+        this.salario = salario;
         this.data_nasc = data_nasc;
         this.sexo = sexo;
         this.rg = rg;
@@ -35,6 +37,14 @@ public class Pessoa extends Endereco{
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 
     public String getData_nasc() {

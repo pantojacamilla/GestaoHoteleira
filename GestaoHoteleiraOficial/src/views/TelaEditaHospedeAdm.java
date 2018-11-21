@@ -10,13 +10,13 @@ import javax.swing.table.TableCellRenderer;
 
 import pessoa.Papel;
 
-public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
+public final class TelaEditaHospedeAdm extends javax.swing.JInternalFrame {
     ArrayList<Papel> listaPapel = new ArrayList<>(); 
-   public TelaEditaFuncionarioAdm(ArrayList<Papel> listaPapel) {
+   
+   public TelaEditaHospedeAdm(ArrayList<Papel> listaPapel) {
         this.listaPapel = listaPapel; 
         initComponents();
-    }
-    
+    } 
       
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -32,7 +32,7 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
         btnRefresh = new javax.swing.JButton();
 
         setClosable(true);
-        setTitle("Editar Funcionários (ADM)");
+        setTitle("Editar Hóspedes (ADM)");
 
         jScrollPane3.setBorder(null);
 
@@ -43,11 +43,11 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Nome", "Cargo", "Salário", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
+                "Nome", "Data de Nascimento", "Sexo", "RG", "CPF", "Telefone", "E-mail", "País", "Uf", "Cidade", "Bairro", "Cep", "Complemento"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, true, false, false, false, false
+                false, false, false, false, false, false, false, false, true, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -78,9 +78,9 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
             jTable1.getColumnModel().getColumn(0).setMinWidth(200);
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(200);
             jTable1.getColumnModel().getColumn(0).setMaxWidth(200);
-            jTable1.getColumnModel().getColumn(1).setMinWidth(100);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(1).setMaxWidth(100);
+            jTable1.getColumnModel().getColumn(1).setMinWidth(120);
+            jTable1.getColumnModel().getColumn(1).setPreferredWidth(120);
+            jTable1.getColumnModel().getColumn(1).setMaxWidth(120);
             jTable1.getColumnModel().getColumn(2).setMinWidth(100);
             jTable1.getColumnModel().getColumn(2).setPreferredWidth(100);
             jTable1.getColumnModel().getColumn(2).setMaxWidth(100);
@@ -90,36 +90,30 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
             jTable1.getColumnModel().getColumn(4).setMinWidth(100);
             jTable1.getColumnModel().getColumn(4).setPreferredWidth(100);
             jTable1.getColumnModel().getColumn(4).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(5).setMinWidth(100);
-            jTable1.getColumnModel().getColumn(5).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(5).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(6).setMinWidth(100);
-            jTable1.getColumnModel().getColumn(6).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(6).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(7).setMinWidth(120);
-            jTable1.getColumnModel().getColumn(7).setPreferredWidth(120);
-            jTable1.getColumnModel().getColumn(7).setMaxWidth(120);
-            jTable1.getColumnModel().getColumn(8).setMinWidth(150);
-            jTable1.getColumnModel().getColumn(8).setPreferredWidth(150);
-            jTable1.getColumnModel().getColumn(8).setMaxWidth(150);
+            jTable1.getColumnModel().getColumn(5).setMinWidth(120);
+            jTable1.getColumnModel().getColumn(5).setPreferredWidth(120);
+            jTable1.getColumnModel().getColumn(5).setMaxWidth(120);
+            jTable1.getColumnModel().getColumn(6).setMinWidth(150);
+            jTable1.getColumnModel().getColumn(6).setPreferredWidth(150);
+            jTable1.getColumnModel().getColumn(6).setMaxWidth(150);
+            jTable1.getColumnModel().getColumn(7).setMinWidth(100);
+            jTable1.getColumnModel().getColumn(7).setPreferredWidth(100);
+            jTable1.getColumnModel().getColumn(7).setMaxWidth(100);
+            jTable1.getColumnModel().getColumn(8).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(8).setPreferredWidth(50);
+            jTable1.getColumnModel().getColumn(8).setMaxWidth(50);
             jTable1.getColumnModel().getColumn(9).setMinWidth(100);
             jTable1.getColumnModel().getColumn(9).setPreferredWidth(100);
             jTable1.getColumnModel().getColumn(9).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(10).setMinWidth(50);
-            jTable1.getColumnModel().getColumn(10).setPreferredWidth(50);
-            jTable1.getColumnModel().getColumn(10).setMaxWidth(50);
+            jTable1.getColumnModel().getColumn(10).setMinWidth(100);
+            jTable1.getColumnModel().getColumn(10).setPreferredWidth(100);
+            jTable1.getColumnModel().getColumn(10).setMaxWidth(100);
             jTable1.getColumnModel().getColumn(11).setMinWidth(100);
             jTable1.getColumnModel().getColumn(11).setPreferredWidth(100);
             jTable1.getColumnModel().getColumn(11).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(12).setMinWidth(100);
-            jTable1.getColumnModel().getColumn(12).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(12).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(13).setMinWidth(100);
-            jTable1.getColumnModel().getColumn(13).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(13).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(14).setMinWidth(300);
-            jTable1.getColumnModel().getColumn(14).setPreferredWidth(300);
-            jTable1.getColumnModel().getColumn(14).setMaxWidth(300);
+            jTable1.getColumnModel().getColumn(12).setMinWidth(300);
+            jTable1.getColumnModel().getColumn(12).setPreferredWidth(300);
+            jTable1.getColumnModel().getColumn(12).setMaxWidth(300);
         }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -128,8 +122,8 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1801, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,12 +182,12 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnExcluir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                    .addComponent(btnExcluir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
                     .addComponent(btnEditar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSalvar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
@@ -203,7 +197,7 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        
+
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
@@ -219,13 +213,13 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnRefreshActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-      
+
     }//GEN-LAST:event_jTable1MouseClicked
     
     public void mostrar(){
         
          
-        
+       
         DefaultTableModel jTable = (DefaultTableModel) jTable1.getModel();
         
         while (jTable.getRowCount() > 0) {
@@ -235,30 +229,24 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
         for(Iterator<Papel> iterator = listaPapel.iterator(); iterator.hasNext();){
             
             Papel papel = iterator.next();
-            
-            if(!"Hospede".equals(papel.getTipo()))
-            {
-                Object[] dados = {
-                    papel.getPessoa().getNome(),
-                    papel.getTipo(),
-                    papel.getPessoa().getSalario(),
-                    papel.getPessoa().getData_nasc(), 
-                    papel.getPessoa().getSexo(),
-                    papel.getPessoa().getRg(), 
-                    papel.getPessoa().getCpf(), 
-                    papel.getPessoa().getTelefone(), 
-                    papel.getPessoa().getEmail(),
-                    papel.getPessoa().getPais(), 
-                    papel.getPessoa().getUf(), 
-                    papel.getPessoa().getCidade(), 
-                    papel.getPessoa().getBairro(),
-                    papel.getPessoa().getCep(), 
-                    papel.getPessoa().getComplemento()
-                };
-                    jTable.addRow(dados);
-            }else{
-                    Object[] dados = { };
-            }
+            Object[] dados = {
+                papel.getPessoa().getNome(),
+                papel.getTipo(),
+                papel.getPessoa().getSalario(),
+                papel.getPessoa().getData_nasc(), 
+                papel.getPessoa().getSexo(),
+                papel.getPessoa().getRg(), 
+                papel.getPessoa().getCpf(), 
+                papel.getPessoa().getTelefone(), 
+                papel.getPessoa().getEmail(),
+                papel.getPessoa().getPais(), 
+                papel.getPessoa().getUf(), 
+                papel.getPessoa().getCidade(), 
+                papel.getPessoa().getBairro(),
+                papel.getPessoa().getCep(), 
+                papel.getPessoa().getComplemento()
+            };
+                jTable.addRow(dados);
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

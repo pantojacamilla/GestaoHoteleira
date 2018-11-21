@@ -3,22 +3,17 @@ package views;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import pessoa.Papel;
-import pessoa.Pessoa;
+
 
 /*
- * @author Davi EDITADO PELA CAMILLA
+ * @author Davi editado pela Camilla
  */
 
-//              PESSOAL ESSSE CÓDIGOS NAO SAO VÁLIDOS AINDA EU SIMPLESMENTE PASSEI A OUTRA TELA PRACÁ
-//              APESAR DOS CÓDIGOS FUCIONAREM NAO ESTÃO APROPRIADOS VLW?! FLW?!
 
 public class TelaPrincipalAdm extends javax.swing.JFrame {
-//    ArrayList<Funcionario> ArrayListFuncionario = new ArrayList<>();
-    
-//Atualizando de acordo com o exemplo do professor    
+     
       ArrayList<Papel> listaPapel = new ArrayList<>();   
-      ArrayList<Pessoa> listaPessoa = new ArrayList<>();
-      
+
     public TelaPrincipalAdm() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
@@ -34,13 +29,13 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
@@ -91,6 +86,26 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu7);
 
+        jMenu2.setText("Hóspedes");
+
+        jMenuItem3.setText("Cadastrar Hóspede");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+
+        jMenuItem9.setText("Editar Hóspede");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem9);
+
+        jMenuBar2.add(jMenu2);
+
         jMenu1.setText("Dependências");
 
         jMenuItem6.setText("Info Hotel");
@@ -118,26 +133,6 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
         jMenu1.add(jMenuItem8);
 
         jMenuBar2.add(jMenu1);
-
-        jMenu2.setText("Hóspedes");
-
-        jMenuItem3.setText("Cadastrar Hóspede");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem3);
-
-        jMenuItem9.setText("Editar Hóspede");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem9);
-
-        jMenuBar2.add(jMenu2);
 
         jMenu3.setText("Reservas");
 
@@ -216,11 +211,7 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-/*   TelaCadastroFuncionarioAdm TelaCadFunc = new TelaCadastroFuncionarioAdm(this.ArrayListFuncionario);
-         jDesktopPane1.add(TelaCadFunc);
-         TelaCadFunc.setVisible(true);*/  
 
-//Atualizando de acordo com o exemplo do professor
          TelaCadastroFuncionarioAdm TelaCadFunc = new TelaCadastroFuncionarioAdm(this.listaPapel);
          jDesktopPane1.add(TelaCadFunc);
          TelaCadFunc.setVisible(true);
@@ -229,11 +220,7 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-/*      TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm(this.ArrayListFuncionario);
-        jDesktopPane1.add(TelaEditFunc);
-        TelaEditFunc.setVisible(true);*/ 
 
-//Atualizando de acordo com o exemplo do professor
         TelaEditaFuncionarioAdm TelaEditFunc = new TelaEditaFuncionarioAdm(this.listaPapel);
         jDesktopPane1.add(TelaEditFunc);
         TelaEditFunc.setVisible(true);
@@ -252,15 +239,16 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-/*   
-        TelaCadastroHospede telaCadHospede = new TelaCadastroHospede();
-        desktop1.add(telaCadHospede);
-        telaCadHospede.setVisible(true);*/
+        TelaCadastroHospedeAdm TelaCadHospAdm  = new TelaCadastroHospedeAdm(this.listaPapel);
+        jDesktopPane1.add(TelaCadHospAdm);
+        TelaCadHospAdm .setVisible(true);
 
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
+        TelaEditaHospedeAdm TelaEditaHospAdm = new TelaEditaHospedeAdm(this.listaPapel);
+        jDesktopPane1.add(TelaEditaHospAdm);
+        TelaEditaHospAdm.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
