@@ -2,6 +2,7 @@ package views;
 
 import hotel.Quarto;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -206,7 +207,6 @@ public class TelaCadastroQuarto extends javax.swing.JInternalFrame {
                                 disponibilidade.getText());
         
         this.listaQuarto.add(q);
-   
     }//GEN-LAST:event_salvarActionPerformed
 
 
