@@ -2,8 +2,7 @@ package hotel;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-/**
- *
+/*
  * @author Milena
  */
 public class Quarto {

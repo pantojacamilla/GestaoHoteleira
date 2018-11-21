@@ -1,5 +1,6 @@
 package views;
 
+import hotel.Quarto;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import pessoa.Papel;
@@ -12,8 +13,9 @@ import pessoa.Papel;
 
 public class TelaPrincipalAdm extends javax.swing.JFrame {
      
-      ArrayList<Papel> listaPapel = new ArrayList<>();   
-
+    ArrayList<Papel> listaPapel = new ArrayList<>();   
+    ArrayList<Quarto> listaQuarto = new ArrayList<> ();
+    
     public TelaPrincipalAdm() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
@@ -222,11 +224,15 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
+        TelaCadastroQuarto TelaCadQuarto = new TelaCadastroQuarto(this.listaQuarto);
+        jDesktopPane1.add(TelaCadQuarto);
+        TelaCadQuarto.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+        TelaEditaQuarto TelaEditQuarto = new TelaEditaQuarto(this.listaQuarto);
+        jDesktopPane1.add(TelaEditQuarto);
+        TelaEditQuarto.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
