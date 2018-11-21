@@ -184,7 +184,6 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
         TelaEditaHospede TelaEditaHosp = new TelaEditaHospede(this.listaPapel);
         desktop1.add(TelaEditaHosp);
         TelaEditaHosp.setVisible(true);
-        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
@@ -204,7 +203,9 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
-        // TODO add your handling code here:
+        TelaLogin telaLogin = new TelaLogin();
+        telaLogin.setVisible(true);
+        dispose(); //fecha a tela de TelaPrincipalPadrao
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     /**
