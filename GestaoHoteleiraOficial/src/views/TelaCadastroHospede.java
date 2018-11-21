@@ -340,6 +340,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveFuncActionPerformed
+
 // CONDIÇÕES DE PREENCHIMENTO DOS CAMPOS
         if(nomeH.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Preencha o campo NOME para continuar");
@@ -390,7 +391,6 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
             compleH.requestFocus();
             
         }else{  
-     //    
             salarioH.setText("0"); 
             Pessoa pessoa = new Pessoa(nomeH.getText(),Double.parseDouble(salarioH.getText()),
                     nascH.getText(),
@@ -412,7 +412,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
                     limparCampos();
         }
     }//GEN-LAST:event_btnSaveFuncActionPerformed
-        public void limparCampos(){
+    public void limparCampos(){
         nomeH.setText("");
         salarioH.setText("");
         nascH.setText(""); 
@@ -477,5 +477,4 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> sexoH;
     private javax.swing.JComboBox<String> ufH;
     // End of variables declaration//GEN-END:variables
-
 }
