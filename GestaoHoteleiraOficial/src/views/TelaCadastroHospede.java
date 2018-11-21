@@ -9,11 +9,11 @@ import pessoa.Pessoa;
 /*
  * @author Davi editado pela camilla
  */
-public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
+public class TelaCadastroHospede extends javax.swing.JInternalFrame {
     
     ArrayList<Papel> listaPapel;
 
-    public TelaCadastroHospedeAdm(ArrayList<Papel> listaPapel) {
+    public TelaCadastroHospede(ArrayList<Papel> listaPapel) {
          this.listaPapel = listaPapel;
          initComponents();
          
@@ -38,7 +38,6 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
         emailH = new javax.swing.JTextField();
         cpfH = new javax.swing.JFormattedTextField();
         salarioH = new javax.swing.JFormattedTextField();
-        jLabel15 = new javax.swing.JLabel();
         btnSaveFunc = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -132,9 +131,6 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel15.setText("dar um jeito de esconder esse campo");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -143,13 +139,16 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nomeH)
                             .addComponent(emailH)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(rgH, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(cpfH))
+                                .addComponent(cpfH, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
@@ -170,12 +169,7 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
                                             .addComponent(jLabel6)
                                             .addComponent(sexoH, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15)
-                            .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 35, Short.MAX_VALUE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,9 +202,7 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
+                .addGap(18, 18, 18)
                 .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -364,7 +356,6 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
         }else if((rgH.getText().isEmpty())){
             JOptionPane.showMessageDialog(null, "Preencha o campo RG para continuar");
             rgH.requestFocus();
-            
         }
         else if((cpfH.getText().isEmpty())){
             JOptionPane.showMessageDialog(null, "Preencha o campo CPF para continuar");
@@ -399,7 +390,8 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
             compleH.requestFocus();
             
         }else{  
-         double salario = 0;
+     //    
+           salarioH.setText("0"); 
             Pessoa pessoa = new Pessoa(nomeH.getText(),Double.parseDouble(salarioH.getText()),
                     nascH.getText(),
                     (String) sexoH.getSelectedItem(), rgH.getText(),
@@ -414,16 +406,16 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
                     papel.setTipo("Hospede");
                     pessoa.setListaPapel(papel);
                     papel.setPessoa(pessoa);
-                 //   pessoa.setSalario(salario);
+                  //  pessoa.setSalario(salario);
                     this.listaPapel.add(papel);
           
-                    JOptionPane.showMessageDialog(null, "Funcionario adicionado com SUCESSO !!!");  
+                    JOptionPane.showMessageDialog(null, "Hospede adicionado com SUCESSO !!!");  
                     limparCampos();
         }
     }//GEN-LAST:event_btnSaveFuncActionPerformed
         public void limparCampos(){
         nomeH.setText("");
-        //salarioF.setText("");
+        salarioH.setText("");
         nascH.setText(""); 
         sexoH.setSelectedItem("Selecione");
         cpfH.setText("");
@@ -468,7 +460,6 @@ public class TelaCadastroHospedeAdm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

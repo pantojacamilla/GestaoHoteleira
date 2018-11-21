@@ -239,16 +239,16 @@ public class TelaPrincipalAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        TelaCadastroHospedeAdm TelaCadHospAdm  = new TelaCadastroHospedeAdm(this.listaPapel);
+        TelaCadastroHospede TelaCadHospAdm  = new TelaCadastroHospede(this.listaPapel);
         jDesktopPane1.add(TelaCadHospAdm);
         TelaCadHospAdm .setVisible(true);
 
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        TelaEditaHospedeAdm TelaEditaHospAdm = new TelaEditaHospedeAdm(this.listaPapel);
-        jDesktopPane1.add(TelaEditaHospAdm);
-        TelaEditaHospAdm.setVisible(true);
+        TelaEditaHospede TelaEditaHosp= new TelaEditaHospede(this.listaPapel);
+        jDesktopPane1.add(TelaEditaHosp);
+        TelaEditaHosp.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed

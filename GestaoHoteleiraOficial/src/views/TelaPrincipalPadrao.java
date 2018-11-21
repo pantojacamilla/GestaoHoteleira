@@ -1,20 +1,18 @@
 package views;
 
-//import tela.ADM.*;
-//import tela.*;
-//import tela.ADM.TelaCadastroFuncionario;
-//import tela.ADM.TelaCadastroFuncionario;
-//import tela.TelaCadastroUsuario;
-//import tela.TelaCadastroUsuario;
+import java.util.ArrayList;
+import javax.swing.JFrame;
+import pessoa.Papel;
 
 /*
  * @author Davi
  */
 public class TelaPrincipalPadrao extends javax.swing.JFrame {
-
+     ArrayList<Papel> listaPapel = new ArrayList<>();   
 
     public TelaPrincipalPadrao() {
         initComponents();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
  
@@ -154,9 +152,9 @@ public class TelaPrincipalPadrao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-//        TelaCadastroHospede telaCadHospede = new TelaCadastroHospede();
-//        desktop1.add(telaCadHospede);
- //       telaCadHospede.setVisible(true);
+        TelaCadastroHospede TelaCadHospAdm  = new TelaCadastroHospede(this.listaPapel);
+        desktop1.add(TelaCadHospAdm);
+        TelaCadHospAdm .setVisible(true);
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
