@@ -1,14 +1,25 @@
 package pessoa;
 
-public abstract class Funcionario extends Papel{
+public abstract class Funcionario extends Papel{ //abstract
     
-    private boolean atividade = false; //Referente a situação atual do funcionario   
-
-    public boolean isAtividade() {
-        return atividade;
+    private double salario; 
+    private boolean trabalhando;
+    
+    
+    //MÉTODOS CONCRETOS
+    public double getSalario() {
+        return salario;
     }
 
-    public void setAtividade(boolean atividade) {
-        this.atividade = atividade;
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public boolean isTrabalhando() {
+        return trabalhando;
+    }
+
+    public void setTrabalhando(boolean trabalhando) {
+        this.trabalhando = trabalhando;
     }
 }

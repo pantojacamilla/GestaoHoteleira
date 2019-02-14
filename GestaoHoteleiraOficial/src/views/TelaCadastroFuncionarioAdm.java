@@ -3,6 +3,7 @@ package views;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import pessoa.Administrador;
+import pessoa.Funcionario;
 import pessoa.Papel;
 import pessoa.Pessoa;
 import pessoa.Recepcionista;
@@ -132,6 +133,11 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         jLabel15.setText("Salário");
 
         salarioF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        salarioF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salarioFActionPerformed(evt);
+            }
+        });
 
         try {
             cpfF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -413,32 +419,33 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
             compleF.requestFocus();
             
         }else{  
+           
             Pessoa pessoa = new Pessoa(nomeF.getText(),Double.parseDouble(salarioF.getText()),nascF.getText(),
-                    (String) sexoF.getSelectedItem(), rgF.getText(),
+                     (String) sexoF.getSelectedItem(), rgF.getText(),
                     cpfF.getText(), foneF.getText(), emailF.getText(),
                     paisF.getText(), (String) ufF.getSelectedItem(),
                     cidadeF.getText(), bairroF.getText(), cepF.getText(),
                     compleF.getText());
-
-            Papel papel;
             
-        
+            Papel papel;
+          
             if (cargoF.getSelectedItem().toString().equals("Administrador")) {
-                      
-                papel = new Administrador();
+                papel = new Administrador(); 
                 papel.setTipo("Administrador");
                 pessoa.setListaPapel(papel);
                 papel.setPessoa(pessoa);
-
-                this.listaPapel.add(papel);
                 
-            } else if (cargoF.getSelectedItem().toString().equals("Recepcionista")){ 
-                papel = new Recepcionista();   
+               this.listaPapel.add(papel); 
+                
+            }else if (cargoF.getSelectedItem().toString().equals("Recepcionista")){ 
+              
+                papel = new Recepcionista();  
+                
                 papel.setTipo("Recepcionista");
                 pessoa.setListaPapel(papel);
                 papel.setPessoa(pessoa);
 
-                this.listaPapel.add(papel);
+                this.listaPapel.add(papel); 
             }
              JOptionPane.showMessageDialog(null, "Funcionario adicionado com SUCESSO !!!");  
              limparCampos();
@@ -454,6 +461,7 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
         foneF.setText("");
         cargoF.setSelectedItem("Selecione");
         emailF.setText("");
+        salarioF.setText("");
         paisF.setText("");
         ufF.setSelectedItem("Selecione");
         cidadeF.setText("");
@@ -475,6 +483,10 @@ public class TelaCadastroFuncionarioAdm extends javax.swing.JInternalFrame {
     private void cargoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cargoFActionPerformed
+
+    private void salarioFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salarioFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_salarioFActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -7,16 +7,15 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-
 import pessoa.Papel;
 
 public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
     ArrayList<Papel> listaPapel = new ArrayList<>(); 
+    
    public TelaEditaFuncionarioAdm(ArrayList<Papel> listaPapel) {
-        this.listaPapel = listaPapel; 
+        this.listaPapel= listaPapel; 
         initComponents();
     }
-    
       
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -184,9 +183,10 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
             
             Papel papel = iterator.next();
             
-            if(!"Hospede".equals(papel.getTipo()))
-            {
+            if(!"Hospede".equals(papel.getTipo())){
+            
                 Object[] dados = {
+                    
                     papel.getPessoa().getNome(),
                     papel.getTipo(),
                     papel.getPessoa().getSalario(),
@@ -204,7 +204,8 @@ public final class TelaEditaFuncionarioAdm extends javax.swing.JInternalFrame {
                     papel.getPessoa().getComplemento()
                 };
                     jTable.addRow(dados);
-            }else{
+            }
+            else{
                     Object[] dados = { };
             }
         }

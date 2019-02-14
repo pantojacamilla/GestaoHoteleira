@@ -37,7 +37,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
         foneH = new javax.swing.JFormattedTextField();
         emailH = new javax.swing.JTextField();
         cpfH = new javax.swing.JFormattedTextField();
-        salarioH = new javax.swing.JFormattedTextField();
+        salarioH = new javax.swing.JTextField();
         btnSaveFunc = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -113,6 +113,11 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
         }
 
         emailH.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        emailH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailHActionPerformed(evt);
+            }
+        });
 
         try {
             cpfH.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -120,11 +125,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
 
-        try {
-            salarioH.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#########")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
+        salarioH.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         salarioH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salarioHActionPerformed(evt);
@@ -139,7 +140,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,9 +203,9 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(salarioH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         btnSaveFunc.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -391,30 +392,29 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
             compleH.requestFocus();
             
         }else{  
-            salarioH.setText("0"); 
-            Pessoa pessoa = new Pessoa(nomeH.getText(),Double.parseDouble(salarioH.getText()),
+                salarioH.setText("0");
+                Pessoa pessoa = new Pessoa(nomeH.getText(),Double.parseDouble(salarioH.getText()),
                     nascH.getText(),
                     (String) sexoH.getSelectedItem(), rgH.getText(),
                     cpfH.getText(), foneH.getText(), emailH.getText(),
                     paisH.getText(), (String) ufH.getSelectedItem(),
                     cidadeH.getText(), bairroH.getText(), cepH.getText(),
                     compleH.getText());
-
-                    Papel papel;
+            
+            
+                Papel papel;
                         
-                    papel = new Hospede();
-                    papel.setTipo("Hospede");
-                    pessoa.setListaPapel(papel);
-                    papel.setPessoa(pessoa);
-                    this.listaPapel.add(papel);
-          
-                    JOptionPane.showMessageDialog(null, "Hospede adicionado com SUCESSO !!!");  
-                    limparCampos();
+                papel = new Hospede();
+                papel.setTipo("Hospede");
+                pessoa.setListaPapel(papel);
+                papel.setPessoa(pessoa);
+                this.listaPapel.add(papel);
+                JOptionPane.showMessageDialog(null, "Hospede adicionado com SUCESSO !!!");  
+                limparCampos();
         }
     }//GEN-LAST:event_btnSaveFuncActionPerformed
     public void limparCampos(){
         nomeH.setText("");
-        salarioH.setText("");
         nascH.setText(""); 
         sexoH.setSelectedItem("Selecione");
         cpfH.setText("");
@@ -440,8 +440,12 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeHActionPerformed
 
+    private void emailHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailHActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailHActionPerformed
+
     private void salarioHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salarioHActionPerformed
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_salarioHActionPerformed
 
 
@@ -473,7 +477,7 @@ public class TelaCadastroHospede extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeH;
     private javax.swing.JTextField paisH;
     private javax.swing.JFormattedTextField rgH;
-    private javax.swing.JFormattedTextField salarioH;
+    private javax.swing.JTextField salarioH;
     private javax.swing.JComboBox<String> sexoH;
     private javax.swing.JComboBox<String> ufH;
     // End of variables declaration//GEN-END:variables

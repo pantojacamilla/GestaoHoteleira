@@ -14,9 +14,8 @@ public class Pessoa extends Endereco{
    private String cpf;
    private String telefone;
    private String email;
-   
    ArrayList<Papel>  listaPapel = new ArrayList<>();
- 
+
 //CONSTRUTOR   
     public Pessoa(String nome,Double salario, String data_nasc, String sexo, String rg, String cpf, String telefone, String email, String pais, String uf, String cidade, String bairro, String cep, String complemento) {
         super(pais, uf, cidade, bairro, cep, complemento);
@@ -28,8 +27,8 @@ public class Pessoa extends Endereco{
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
-    }
-   
+    } 
+    
 //GETTERS E SETTERS    
     public String getNome() {
         return nome;
@@ -106,5 +105,4 @@ public class Pessoa extends Endereco{
     public void setListaPapel(Papel p){
       this.listaPapel.add(p);
     }
-
 }
