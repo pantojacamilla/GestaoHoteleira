@@ -1,5 +1,7 @@
 # GestaoHoteleira
-Trabalho da disciplina de POO I
+Trabalho oficial da disciplina de POO I.
+
+
 Participantes:
 
 -Camilla
